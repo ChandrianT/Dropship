@@ -32,32 +32,6 @@
 
 <body>
 	<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="contactinfo">
-							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="social-icons pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header_top-->
-		
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
 				<div class="row">
@@ -65,35 +39,12 @@
 						<div class="logo pull-left">
 							<a href="<?php echo base_url();?>"><img src="<?php echo base_url()?>assets/front/images/home/logo.png" alt="" /></a>
 						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canada</a></li>
-									<li><a href="#">UK</a></li>
-								</ul>
-							</div>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canadian Dollar</a></li>
-									<li><a href="#">Pound</a></li>
-								</ul>
-							</div>
-						</div>
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<?php $customer_id = $this->session->userdata('cus_id');?>
 								<?php $shipping_id = $this->session->userdata('shipping_id');?>
@@ -122,18 +73,7 @@
 									<a href="<?php echo base_url()?>payment"><i class="fa fa-credit-card"></i>Payment</a>
 									<?php } ?>
 								</li>
-								<li>	
-									<a href="<?php echo base_url()?>show-cart"><i class="fa fa-shopping-cart"></i>
-									<?php $cart_items =  $this->cart->total_items();
-										if($cart_items>0){
-									?> 
-									 Cart(<?php echo $cart_items;?>)
-									 <?php }else{?>
-									  Cart(empty)
-									 <?php } ?>
-									</a>
-
-								</li>
+								
 								<?php 
 									
 								if($customer_id){?>
@@ -167,17 +107,16 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="<?php echo base_url();?>" class="active">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-									<ul role="menu" class="sub-menu">
-										<li><a href="<?php echo base_url()?>products">Products</a></li>
-											<?php if($this->cart->total_items()!=Null && $customer_id!=NULL){
+								<li><a href="<?php echo base_url();?>" class="active">Dashboard</a></li>
+								<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+								<li><a href="<?php echo base_url()?>products">Produk</a></li>
+								<li><a href="#">Brand</a></li>
+								<?php if($this->cart->total_items()!=Null && $customer_id!=NULL){
 													?>
-											<li>
-												<a href="<?php echo base_url()?>billing">Checkout</a>
-
-											</li>
-												<?php }elseif($this->cart->total_items()!=Null){?>
+								<li>
+								<a href="<?php echo base_url()?>billing">Checkout</a>
+								</li>
+								<?php }elseif($this->cart->total_items()!=Null){?>
 											<li>
 												<a href="<?php echo base_url()?>checkout">Checkout</a>
 
@@ -207,9 +146,6 @@
 			 
 									</ul>
 								</li> 
-								<li><a href="<?php echo base_url()?>home/_404_page">404</a></li>
-								<li><a href="<?php echo base_url()?>contact">Contact</a></li>
-							</ul>
 						</div>
 					</div>
 					<div class="col-sm-3">
