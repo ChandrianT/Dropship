@@ -10,7 +10,7 @@ class DistributorLoginModel extends CI_Model {
 							->row();
 		return 	$user_details;
 	}
-	public function DistributorLoginModel(){
+	public function DistributorRegisterModel(){
 		$data['username'] = $this->input->post('username',true);
 		$data['user_email'] = $this->input->post('user_email',true);
 		//$user_password = $this->input->post('user_password',true);

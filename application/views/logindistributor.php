@@ -32,7 +32,7 @@
                          echo $success_message;
                      }?>
                      </p>
-                    <h3 class="panel-title">Please Sign In</h3>
+                    <h3 class="panel-title">Please Sign In as a Distributor</h3>
                     <p class="text-danger"> 
                      <?php
                           if(isset($error_message)){
