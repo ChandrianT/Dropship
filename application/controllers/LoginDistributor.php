@@ -30,12 +30,12 @@ class LoginDistributor extends CI_Controller {
 				$this->load->view('logindistributor',$data);
 			}
 		}else{
-			redirect('Login/login_error');
+			
 		}
 	}
 	public function login_error(){
 		$data['error_message'] = "Incorrect Username Or Password...!";
-			$this->load->view('login',$data);
+			$this->load->view('logindistributor',$data);
 	}
 	public function distributorlogout(){
 		$this->session->sess_destroy();

@@ -300,16 +300,16 @@
                         <!--end search section-->
                     </li>
                     <li class="selected">
-                        <a href="<?php echo base_url();?>dashboard"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        <a href="<?php echo base_url();?>distributordashboard"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                       <li>
                         <a href="#"><i class="fa fa-product-hunt fa-fw"></i> Products Option<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                 <a href="<?php echo base_url();?>add-product"><i class=""></i>Add Product</a>
+                                 <a href="<?php echo base_url();?>dsbadd-product"><i class=""></i>Add Product</a>
                              </li>
                             <li>
-                                 <a href="<?php echo base_url();?>product-list"><i class=""></i>Product List</a>
+                                 <a href="<?php echo base_url();?>dsbproduct-list"><i class=""></i>Product List</a>
                             </li>
                         </ul>
                     </li>
@@ -318,10 +318,10 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Brand Option<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url();?>add-brand">Add Brand</a>
+                                <a href="<?php echo base_url();?>dsbadd-brand">Add Brand</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url();?>brand-list">Brand List</a>
+                                <a href="<?php echo base_url();?>dsbbrand-list">Brand List</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
