@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Home | E-Shopper</title>
+	<title>Home | E-Dropship</title>
 
 	<link href="<?php echo base_url()?>assets/front/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/front/css/font-awesome.min.css" rel="stylesheet">
@@ -43,9 +43,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								
-								
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+	
 								<?php $customer_id = $this->session->userdata('cus_id');?>
 								<?php $shipping_id = $this->session->userdata('shipping_id');?>
 
@@ -68,23 +66,22 @@
 
 								</li>
 									<?php } ?>
-								<li>
-									<?php if($this->cart->total_items()!=Null && $customer_id!=NULL && $shipping_id!=NULL){?>
-									<a href="<?php echo base_url()?>payment"><i class="fa fa-credit-card"></i>Payment</a>
-									<?php } ?>
-								</li>
 								
-								<?php 
-									
-								if($customer_id){?>
-								<li>
-									<a href="<?php echo base_url()?>logout"><i class="fa fa-lock"></i> Logout</a>
-								</li>
-								<?php }else{ ?>
-								<li>
-									<a href="<?php echo base_url()?>checkout"><i class="fa fa-lock"></i> Login</a>
-								</li>
-								<?php } ?>
+											<li>
+												<?php if($this->cart->total_items()!=Null && $customer_id!=NULL && $shipping_id!=NULL){?>
+												<a href="<?php echo base_url()?>payment"><i class="fa fa-credit-card"></i>Pembayaran</a>
+												<?php } ?>
+											</li>
+											<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+											<?php if($customer_id){?>
+											<li>
+												<a href="<?php echo base_url()?>logout"><i class="fa fa-lock"></i> Logout</a>
+											</li>
+											<?php }else{ ?>
+											<li>
+												<a href="<?php echo base_url()?>checkout"><i class="fa fa-lock"></i> Login</a>
+											</li>
+											<?php } ?>
 								
 							</ul>
 						</div>
@@ -108,41 +105,29 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="<?php echo base_url();?>" class="active">Dashboard</a></li>
-								<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
 								<li><a href="<?php echo base_url()?>products">Produk</a></li>
-								<li><a href="#">Brand</a></li>
+								<li><a href="<?php echo base_url()?>brands">Brand</a></li>
 								<?php if($this->cart->total_items()!=Null && $customer_id!=NULL){
 													?>
-								<li>
-								<a href="<?php echo base_url()?>billing">Checkout</a>
-								</li>
+								<li>	
+												<a href="<?php echo base_url()?>show-cart">
+												<?php $cart_items =  $this->cart->total_items();
+													if($cart_items>0){
+												?> 
+												 Keranjang(<?php echo $cart_items;?>)
+												 <?php }else{?>
+												  keranjang(kosong)
+												 <?php } ?>
+												</a>
+
+											</li>
 								<?php }elseif($this->cart->total_items()!=Null){?>
 											<li>
 												<a href="<?php echo base_url()?>checkout">Checkout</a>
 
 											</li>
 												<?php } ?>
-											<li>	
-												<a href="<?php echo base_url()?>show-cart">
-												<?php $cart_items =  $this->cart->total_items();
-													if($cart_items>0){
-												?> 
-												 Cart(<?php echo $cart_items;?>)
-												 <?php }else{?>
-												  Cart(empty)
-												 <?php } ?>
-												</a>
 
-											</li>
-											<?php if($customer_id){?>
-											<li>
-												<a href="<?php echo base_url()?>logout"><i class="fa fa-lock"></i> Logout</a>
-											</li>
-											<?php }else{ ?>
-											<li>
-												<a href="<?php echo base_url()?>checkout"><i class="fa fa-lock"></i> Login</a>
-											</li>
-											<?php } ?>
 			 
 									</ul>
 								</li> 
@@ -204,8 +189,8 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<h2><span>e</span>-Dropship</h2>
+							<p>E-Dropship merupakan tempat </p>
 						</div>
 					</div>
 					<div class="col-sm-7">
@@ -348,8 +333,8 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2017 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Develop by <span><a target="_blank" href="http://www.sumon-it.com">Sumon Sarker</a></span></p>
+					<p class="pull-left">Copyright © 2022 E-Dropship Inc. All rights reserved.</p>
+					<p class="pull-right">Develop by <span><a target="_blank" href="http://www.sumon-it.com">C&N</a></span></p>
 				</div>
 			</div>
 		</div>
