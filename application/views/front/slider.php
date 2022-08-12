@@ -22,10 +22,10 @@
 			?>
 			
 				<div class="col-sm-6">
-					<h1><span>E</span>-SHOPPER</h1>
+					<h1><span>E</span>-DROPSHIP</h1>
 					<h2><?php echo $slider->pro_title;?></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-					<button type="button" class="btn btn-default get">Get it now</button>
+					<p>Semua orang dapat melakukan bisnis online secara gratis dengan E-Dropship. </p>
+					<button type="button" class="btn btn-default get">Belanja</button>
 				</div>
 				<div class="col-sm-6">
 					<img src="<?php echo base_url().$slider->pro_image;?>" class="girl img-responsive" alt="" />

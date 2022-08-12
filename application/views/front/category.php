@@ -1,6 +1,6 @@
 <div class="col-sm-3">
 	<div class="left-sidebar">
-		<h2>Category</h2>
+		<h2>Kategori</h2>
 		<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 			<?php $all_category = $this->CategoryModel->get_all_category();?>
 			<?php $all_brands = $this->BrandModel->get_all_brand();?>
@@ -76,7 +76,7 @@
 
 		<!--price-range-->
 		<div class="">
-			<h2>Price Range</h2>
+			<h2>Filter Harga</h2>
 			<p id="amount" style="text-align:center"></p>
 			<div id="slider-range"></div>
 
