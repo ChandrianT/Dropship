@@ -35,15 +35,41 @@
 									<input type="text" placeholder="Address*" name="cus_address">
 									<input type="text" placeholder="City" name="cus_city">
 									<select name="cus_country">
-										<option>-- Country --</option>
-										<option>United States</option>
-										<option>Bangladesh</option>
-										<option>UK</option>
-										<option>India</option>
-										<option>Pakistan</option>
-										<option>Ucrane</option>
-										<option>Canada</option>
-										<option>Dubai</option>
+									<option>-- Provinsi --</optio>
+									<option>Jawa Barat</option>
+									<option>Jawa Tengah</option>
+									<option>Jawa Timur</option>
+									<option>DKI Jakarta</option>
+									<option>Banten</option>
+									<option>DI Yogakarta</option>
+									<option>Bali</option>
+									<option>Nanggore Aceh Darussalam</option>
+									<option>Sumatera Utara</option>
+									<option>Sumatera Selatan</option>
+									<option>Sumatera Barat</option>
+									<option>Bengkulu</option>
+									<option>Riau</option>
+									<option>Kepulauan Riau</option>
+									<option>Jambi</option>
+									<option>Lampung</option>
+									<option>Bangka Belitung</option>
+									<option>Kalimantan Barat</option>
+									<option>Kalimantan Timur</option>
+									<option>Kalimantan Utara</option>
+									<option>Kalimantan Selatan</option>
+									<option>Kalimantan Tengah</option>
+									<option>Nusa Tenggara Timur</option>
+									<option>Nusa Tenggara Barat</option>
+									<option>Gorontalo</option>
+									<option>Sulawesi Barat</option>
+									<option>Sulawesi Tengah</option>
+									<option>Sulawesi Tenggara</option>
+									<option>Sulawesi Utara</option>
+									<option>Sulawesi Selatan</option>
+									<option>Maluku Utara</option>
+									<option>Maluku</option>
+									<option>Papua Barat</option>
+									<option>Papua</option>
 									</select>
 									<input type="text" placeholder="Zip" name="cus_zip">
 									<input type="text" placeholder="Fax" name="cus_fax">
