@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                            <h5 style='color:red'> <?php echo validation_errors();?></h5>
-                                <?php echo form_open('update-brand'.'/'.$brand_by_id->brand_id,'');?>
+                                <?php echo form_open('dsbupdate-brand'.'/'.$brand_by_id->brand_id,'');?>
                                 <div class="form-group">
                                     <label>Update Brand</label>
                                     <input type="text" class="form-control" value="<?php echo $brand_by_id->brand_name;?>" name="brand_name" required="">

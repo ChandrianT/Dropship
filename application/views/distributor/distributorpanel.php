@@ -36,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="#">
                     <h1><strong>Distributor Panel</strong></h1>
                 </a>
             </div>
@@ -254,7 +254,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="<?php echo base_url();?>Login/adminlogout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        <li><a href="<?php echo base_url();?>LoginDistributor/distributorlogout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
@@ -284,7 +284,7 @@
                                     <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
                                 </div>
                             </div>
-                        </div>
+                    </div>
                         <!--end user image section-->
                     </li>
                     <li class="sidebar-search">

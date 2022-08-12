@@ -40,7 +40,7 @@ class dsbProduct extends CI_Controller{
 		$data['all_cat'] = $this->ProductModel->get_all_category();
 		$data['all_sub_cat'] = $this->ProductModel->get_all_sub_category();
 		$data['all_brand'] = $this->ProductModel->get_all_brand();
-		$data['main_content'] = $this->load->view('distributor/edit_product',$data,true);
+		$data['main_content'] = $this->load->view('distributor/dsbedit_product',$data,true);
 		$this->load->view('distributor/distributorpanel',$data);
 		
 	}
@@ -69,18 +69,18 @@ class dsbProduct extends CI_Controller{
 			$this->ProductModel->update_product_model($product_image);
 			$this->session->set_flashdata("update_pro_msg","Product Updated Successfully");
 			$product_id = $this->input->post('pro_id',true);
-			redirect('edit-product/'.$product_id);
+			redirect('dsbedit-product/'.$product_id);
 
 		}else{
 			$product_id = $this->input->post('pro_id',true);
 			$product_image = $this->upload_product_image();
 			if($product_image==NULL){
-			redirect('edit-product/'.$product_id);
+			redirect('dsbedit-product/'.$product_id);
 			}else{
 			$this->ProductModel->update_product_model($product_image);
 			unlink($this->input->post('old_pro_image',true));
 			$this->session->set_flashdata("update_pro_msg","Product Updated Successfully");
-			redirect('edit-product/'.$product_id);
+			redirect('dsbedit-product/'.$product_id);
 		}
 			
 		}

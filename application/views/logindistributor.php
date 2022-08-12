@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chandrian| Distributor Dashboad </title>
+  <title>Chandrian| Distributor Dashboard </title>
   <!-- Core CSS - Include with every page -->
   <link href="<?php echo base_url()?>assets/back/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
   <link href="<?php echo base_url()?>assets/back/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -41,7 +41,7 @@
              </p>
          </div>
          <div class="panel-body">
-            <form role="form" action="<?php echo base_url();?>Login/checklogin" method="post">
+            <form role="form" action="<?php echo base_url();?>LoginDistributor/checklogin" method="post">
                 <fieldset>
                     <div class="form-group">
                         <input class="form-control" placeholder="E-mail" name="user_email" type="email" autofocus>

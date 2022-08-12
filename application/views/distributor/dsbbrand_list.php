@@ -44,8 +44,8 @@
                                     <td><?php echo $i;?></td>
                                     <td><?php echo $value->brand_name;?></td>
                                    <td>
-                                        <a class="btn btn-info" href="<?php  echo base_url();?>edit-brand/<?php echo $value->brand_id;?>">Edit</a>
-                                        <a class="btn btn-danger" href="<?php  echo base_url();?>delete-brand/<?php echo $value->brand_id;?>">Delete</a>
+                                        <a class="btn btn-info" href="<?php  echo base_url();?>dsbedit-brand/<?php echo $value->brand_id;?>">Edit</a>
+                                        <a class="btn btn-danger" href="<?php  echo base_url();?>dsbdelete-brand/<?php echo $value->brand_id;?>">Delete</a>
                                     </td> 
                                     
                                 </tr>
