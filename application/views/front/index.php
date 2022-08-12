@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Home | E-Dropship</title>
+	<title>Dashboard | E-Dropship</title>
 
 	<link href="<?php echo base_url()?>assets/front/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/front/css/font-awesome.min.css" rel="stylesheet">
@@ -189,8 +189,8 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-Dropship</h2>
-							<p>E-Dropship merupakan tempat </p>
+							<h2><span>E</span>-Dropship</h2>
+							<p>Tempat melakukan dropshipping berbagai macam Handphone, Laptop, Tablet, dll. </p>
 						</div>
 					</div>
 					<div class="col-sm-7">
@@ -256,8 +256,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-							<img src="<?php echo base_url()?>assets/front/images/home/map.png" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+							<img src="<?php echo base_url()?>assets/front/images/home/indo.png" alt="" />
 						</div>
 					</div>
 				</div>
@@ -281,13 +280,12 @@
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>Quock Shop</h2>
+							<h2>Quick Ship</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">T-Shirt</a></li>
-								<li><a href="#">Mens</a></li>
-								<li><a href="#">Womens</a></li>
-								<li><a href="#">Gift Cards</a></li>
-								<li><a href="#">Shoes</a></li>
+								<li><a href="#">Handphone</a></li>
+								<li><a href="#">Tablet</a></li>
+								<li><a href="#">Laptop</a></li>
+								<li><a href="#">Komputer</a></li>
 							</ul>
 						</div>
 					</div>
@@ -305,7 +303,7 @@
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>About Shopper</h2>
+							<h2>About E-Dropship</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="#">Company Information</a></li>
 								<li><a href="#">Careers</a></li>

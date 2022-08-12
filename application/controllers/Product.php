@@ -47,9 +47,9 @@ class Product extends CI_Controller{
 	private function upload_product_image(){
 		$config['upload_path']          = './uploads/';
         $config['allowed_types']        = 'png|gif|jpg|jpeg';
-        $config['max_size']             = 1000;//kb
+        $config['max_size']             = 5000;//kb
         $config['max_width']            = 1024;
-        $config['max_height']           = 768;
+        $config['max_height']           = 1024;
         $this->load->library('upload', $config);
         if($this->upload->do_upload('pro_image')){
         	$data = $this->upload->data();

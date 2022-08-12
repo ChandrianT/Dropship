@@ -3,8 +3,8 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="<?php echo base_url();?>">Home</a></li>
-				  <li class="active">Shopping Cart</li>
+				  <li><a href="<?php echo base_url();?>">Dashboard</a></li>
+				  <li class="active">Keranjang Belanja</li>
 				</ol>
 			</div>
 			<div class="table-responsive cart_info">
@@ -13,8 +13,8 @@
 						<tr class="cart_menu">
 							<td class="image">Item</td>
 							<td class="description"></td>
-							<td class="price">Price</td>
-							<td class="quantity">Quantity</td>
+							<td class="price">Harga</td>
+							<td class="quantity">Jumlah</td>
 							<td class="total">Total</td>
 							<td></td>
 						</tr>
@@ -34,7 +34,7 @@
 								<h4><a href=""><?php echo $items['name']?></a></h4>
 							</td>
 							<td class="cart_price">
-								<p>$<?php echo $items['price']?></p>
+								<p>Rp. <?php echo $items['price']?></p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
@@ -50,7 +50,7 @@
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$<?php echo $items['subtotal']?></p>
+								<p class="cart_total_price">Rp. <?php echo $items['subtotal']?></p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href="<?php echo base_url()?>delete-to-cart/<?php echo $items['rowid']?>"><i class="fa fa-times"></i></a>
@@ -131,11 +131,11 @@
 							<?php 
 								$cart_total = $this->cart->total();
 							?>
-							<li>Cart Sub Total <span>$<?php echo $cart_total;?></span></li>
+							<li>Total Belanja <span>Rp. <?php echo $cart_total;?></span></li>
 							<?php
 								$tax = ($cart_total*2)/100;
 							?>
-							<li>Eco Tax 2% <span>$<?php echo $tax?></span></li>
+							<li>Pajak 2% <span>Rp. <?php echo $tax?></span></li>
 							<!-- Shipping Cost Dependend Quantity, price, buyer distance etc -->
 							<?php
 								$shiping = "0";
@@ -151,7 +151,7 @@
 									$shiping = 0;
 								}
 							?>
-							<li>Shipping Cost <span>$<?php echo $shiping?></span></li>
+							<li>Shipping Cost <span>Rp. <?php echo $shiping?></span></li>
 							<?php $g_total = $cart_total+$tax+$shiping;?>
 							<li>Total <span>
 								<?php

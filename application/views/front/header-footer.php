@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Home | E-Shopper</title>
+	<title>Dropship | E-Dropship</title>
 	<link href="<?php echo base_url()?>assets/front/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/front/css/font-awesome.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/front/css/prettyPhoto.css" rel="stylesheet">
@@ -33,8 +33,8 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +62 8909 333 53</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> CnN@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -60,28 +60,6 @@
 						<div class="logo pull-left">
 							<a href="<?php echo base_url();?>"><img src="<?php echo base_url()?>assets/front/images/home/logo.png" alt="" /></a>
 						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canada</a></li>
-									<li><a href="#">UK</a></li>
-								</ul>
-							</div>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canadian Dollar</a></li>
-									<li><a href="#">Pound</a></li>
-								</ul>
-							</div>
 						</div>
 					</div>
 					<div class="col-sm-8">
