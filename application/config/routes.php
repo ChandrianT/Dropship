@@ -92,24 +92,24 @@ $route['update-brand/(.+)'] = 'Brand/update_brand/$1';
 $route['delete-brand/(.+)'] = 'Brand/delete_brand/$1';
 
 /*Admin Product*/
-$route['add-product'] = 'dsbProduct/add_product_form';
-$route['product-list'] = 'dsbProduct/show_product_list';
-$route['save-product'] = 'dsbProduct/insert_product';
-$route['edit-product/(.+)'] = 'dsbProduct/edit_product/$1';
-$route['update-product'] = 'dsbProduct/update_product';
-$route['delete-product/(.+)'] = 'dsbProduct/delete_product/$1';
+$route['add-product'] = 'Product/add_product_form';
+$route['product-list'] = 'Product/show_product_list';
+$route['save-product'] = 'Product/insert_product';
+$route['edit-product/(.+)'] = 'Product/edit_product/$1';
+$route['update-product'] = 'Product/update_product';
+$route['delete-product/(.+)'] = 'Product/delete_product/$1';
 
 //Distributor
 $route['distributordashboard'] = 'Distributor/distributordashboard';
 $route['distributorregister-form'] = 'Distributor/distributorregisterform';
 
 /*Distributor Brand*/
-$route['dsbadd-brand'] = 'Brand/add_brand_form';
-$route['dsbsave-brand'] = 'Brand/save_brand';
-$route['dsbbrand-list'] = 'Brand/show_brand_list';
-$route['dsbedit-brand/(.+)'] = 'Brand/edit_brand/$1';
-$route['dsbupdate-brand/(.+)'] = 'Brand/update_brand/$1';
-$route['dsbdelete-brand/(.+)'] = 'Brand/delete_brand/$1';
+$route['dsbadd-brand'] = 'dsbBrand/add_brand_form';
+$route['dsbsave-brand'] = 'dsbBrand/save_brand';
+$route['dsbbrand-list'] = 'dsbBrand/show_brand_list';
+$route['dsbedit-brand/(.+)'] = 'dsbBrand/edit_brand/$1';
+$route['dsbupdate-brand/(.+)'] = 'dsbBrand/update_brand/$1';
+$route['dsbdelete-brand/(.+)'] = 'dsbBrand/delete_brand/$1';
 
 /*Distributor Product*/
 $route['dsbadd-product'] = 'dsbProduct/add_product_form';
