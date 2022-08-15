@@ -11,7 +11,7 @@ class dsbProduct extends CI_Controller{
 			redirect('LoginDistributor');
 		}
 		$data = array();
-		$this->load->model("ProductModel");
+		$this->load->model("dsbProductModel");
 	}
 	public function add_product_form(){
 		$data['all_cat'] = $this->ProductModel->get_all_category();

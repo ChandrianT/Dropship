@@ -17,7 +17,7 @@ class Login extends CI_Controller {
 		$this->load->model('LoginModel');
 		$user_details = $this->LoginModel->checkuserlogin($useremail);
 		if(password_verify($userpassword,$user_details->user_password)){
-			if ($user_details->user_status == 1) {
+			if ($user_details->user_status == 1 && $user_details-> user_role == 1) {
 				$session_data['userid'] 	= $user_details->user_id;
 				$session_data['username']	= $user_details->username;
 				$session_data['useremail']	= $user_details->user_email;
@@ -26,7 +26,7 @@ class Login extends CI_Controller {
 				$this->session->set_userdata($session_data);
 				redirect("Admin");
 			} else {
-				$data['error_message'] = "U Are Not An Active User...!";
+				$data['error_message'] = "Akun ini tidak tersedia. Silahkan masukan akun admin aktif !";
 				$this->load->view('login',$data);
 			}
 		}else{

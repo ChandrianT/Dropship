@@ -45,9 +45,17 @@
                                     <select class="form-control" name="user_role">
                                         <option>Select One</option>
                                         <option value="1">Admin</option>
-                                        <option value="2">Moderator</option>
-                                        <option value="3">Author</option>
-                                        <option value="4">Editor</option>
+                                        <option value="2">Distributor</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Select Brand</label>
+                                    <select class="form-control" name="user_brand">
+                                        <option>Select One</option>
+                                        <?php $all_brand = $this->ProductModel->get_all_brand()?>
+                                        <?php foreach ($all_brand as $brand) { ?>
+                                        <option value="<?php echo $brand->brand_id;?>"><?php echo $brand->brand_name;?></option>
+                                        <?php } ?>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Make User</button>

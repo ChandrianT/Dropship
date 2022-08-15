@@ -17,7 +17,7 @@ class LoginDistributor extends CI_Controller {
 		$this->load->model('DistributorLoginModel');
 		$user_details = $this->DistributorLoginModel->checkuserlogin($useremail);
 		if(password_verify($userpassword,$user_details->user_password)){
-			if ($user_details->user_status == 1) {
+			if ($user_details->user_status == 1 && $user_details->user_role == 2) {
 				$session_data['userid'] 	= $user_details->user_id;
 				$session_data['username']	= $user_details->username;
 				$session_data['useremail']	= $user_details->user_email;
@@ -25,12 +25,13 @@ class LoginDistributor extends CI_Controller {
 				$session_data['userstatus']	= $user_details->user_status;
 				$this->session->set_userdata($session_data);
 				redirect("Distributor");
+				
 			} else {
-				$data['error_message'] = "U Are Not An Active User...!";
+				$data['error_message'] = "Akun ini tidak tersedia. Silahkan masukan akun Distributor aktif !";
 				$this->load->view('logindistributor',$data);
 			}
 		}else{
-			
+			redirect('LoginDistributor/login_error');
 		}
 	}
 	public function login_error(){
