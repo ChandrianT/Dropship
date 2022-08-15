@@ -100,7 +100,7 @@
 
 
 		<div class="shipping text-center"><!--shipping-->
-			<img src="<?php echo base_url()?>assets/front/images/home/shipping.jpg" alt="" />
+			<img src="<?php echo base_url()?>" alt="" />
 		</div><!--/shipping-->
 		
 	</div>
