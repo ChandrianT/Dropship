@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                            <h5 style='color:red'> <?php echo validation_errors();?></h5>
-                                <?php echo form_open('save-brand','');?>
+                                <?php echo form_open('dsbsave-brand','');?>
                                 <div class="form-group">
                                     <label>Add Brand</label>
                                     <input type="text" class="form-control" value="<?php echo set_value('brand_name')?>" name="brand_name" required="">

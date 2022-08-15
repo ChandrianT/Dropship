@@ -17,7 +17,8 @@ class DistributorLoginModel extends CI_Model {
 		//$encryp_password = password_hash('user_password',PASSWORD_DEFAULT);
 		//$data['user_password'] = $encryp_password;
 		$data['user_password'] = password_hash($this->input->post('user_password',true),PASSWORD_DEFAULT);
-		$data['user_role'] = $this->input->post('user_role',true);
+		$data['user_role'] = $this->input->post('2',true);
+		$data['user_role'] = '2';
 		$data['user_status'] = '1';
 		$this->db->insert('tbl_user',$data);
 	}

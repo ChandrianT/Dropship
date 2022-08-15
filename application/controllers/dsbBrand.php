@@ -28,19 +28,19 @@ class dsbBrand extends CI_Controller{
 		}
 	}
 	public function show_brand_list(){
-		$data['all_brands']= $this->BrandModel->get_all_brand();
+		$data['all_brands']= $this->dsbBrandModel->get_all_brand();
 		$data['main_content'] = $this->load->view('distributor/dsbbrand_list',$data,true);
 		$this->load->view('distributor/distributorpanel',$data);
 	}
 
 	public function delete_brand($brand_id){
-		$this->BrandModel->delete_brand_by_id($brand_id);
+		$this->dsbBrandModel->delete_brand_by_id($brand_id);
 		$this->session->set_flashdata("flsh_msg","<font class='success'>Brand Deleted Successfully</font>");
            redirect('dsbbrand-list');
 	}
 	
 	public function edit_brand($brand_id){
-		$data['brand_by_id'] = $this->BrandModel->edit_brand_by_id($brand_id);
+		$data['brand_by_id'] = $this->dsbBrandModel->edit_brand_by_id($brand_id);
 		$data['main_content'] = $this->load->view('distributor/dsbedit_brand',$data,true);
 		$this->load->view('distributor/distributorpanel',$data);
 	}

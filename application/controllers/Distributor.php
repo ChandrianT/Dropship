@@ -14,7 +14,7 @@ class Distributor extends CI_Controller {
 	}
 	public function distributordashboard(){
 		$data = array();
-		$data['distributormain_content'] = $this->load->view('distributor/distributor_main','',TRUE);
+		$data['main_content'] = $this->load->view('distributor/distributor_main','',TRUE);
 		$this->load->view('distributor/distributorpanel',$data);
 	}
 	public function distributorregisterform(){
@@ -31,7 +31,7 @@ class Distributor extends CI_Controller {
 		if($this->form_validation->run()){
 			$this->DistributorLoginModel->DistributorRegisterModel();
 			$data['success_message'] = "User Successfully Added";
-			$data['distributormain_content'] = $this->load->view('distributor/register_distributor',$data,TRUE);
+			$data['main_content'] = $this->load->view('distributor/register_distributor',$data,TRUE);
 			$this->load->view('distributor/distributorpanel',$data);
 		}else{
 			$this->registerform();
