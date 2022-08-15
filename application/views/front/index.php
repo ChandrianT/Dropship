@@ -37,7 +37,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="<?php echo base_url();?>"><img src="<?php echo base_url()?>assets/front/images/home/logo.png" alt="" /></a>
+							<a href="<?php echo base_url();?>"><img src="<?php echo base_url()?>assets/front/images/home/logod.png" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
@@ -355,16 +355,16 @@
     $( "#slider-range" ).slider({
       range: true,
       min: 0,
-      max: 1500,
-      values: [ 500,1000 ],
+      max: 10000000,
+      values: [ 3000000,7000000 ],
       slide: function( event, ui ) {
-        $( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        $( "#amount" ).html( "Rp. " + ui.values[ 0 ] + " - Rp. " + ui.values[ 1 ] );
 		$( "#amount1" ).val(ui.values[ 0 ]);
 		$( "#amount2" ).val(ui.values[ 1 ]);
       }
     });
-    $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#amount" ).html( "Rp. " + $( "#slider-range" ).slider( "values", 0 ) +
+     " - Rp. " + $( "#slider-range" ).slider( "values", 1 ) );
   });
   </script>
 

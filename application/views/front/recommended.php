@@ -1,5 +1,5 @@
 <div class="recommended_items"><!--recommended_items-->
-	<h2 class="title text-center">recommended items</h2>
+	<h2 class="title text-center">Rekomendasi Item</h2>
 	
 	<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
@@ -11,7 +11,7 @@
 								<img src="<?php echo base_url()?>assets/front/images/home/recommend1.jpg" alt="" />
 								<h2>$56</h2>
 								<p>Easy Polo Black Edition</p>
-								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
 							</div>
 							
 						</div>
@@ -24,7 +24,7 @@
 								<img src="<?php echo base_url()?>assets/front/images/home/recommend2.jpg" alt="" />
 								<h2>$56</h2>
 								<p>Easy Polo Black Edition</p>
-								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
 							</div>
 							
 						</div>
@@ -37,7 +37,7 @@
 								<img src="<?php echo base_url()?>assets/front/images/home/recommend3.jpg" alt="" />
 								<h2>$56</h2>
 								<p>Easy Polo Black Edition</p>
-								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
 							</div>
 							
 						</div>
@@ -52,7 +52,7 @@
 								<img src="<?php echo base_url()?>assets/front/images/home/recommend1.jpg" alt="" />
 								<h2>$56</h2>
 								<p>Easy Polo Black Edition</p>
-								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
 							</div>
 							
 						</div>
@@ -65,7 +65,7 @@
 								<img src="<?php echo base_url()?>assets/front/images/home/recommend2.jpg" alt="" />
 								<h2>$56</h2>
 								<p>Easy Polo Black Edition</p>
-								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
 							</div>
 							
 						</div>
@@ -78,7 +78,7 @@
 								<img src="<?php echo base_url()?>assets/front/images/home/recommend3.jpg" alt="" />
 								<h2>$56</h2>
 								<p>Easy Polo Black Edition</p>
-								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
 							</div>
 							
 						</div>

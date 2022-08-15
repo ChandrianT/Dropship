@@ -1,6 +1,6 @@
 
 <div class="features_items"><!--features_items-->
-	<h2 class="title text-center">Product Items</h2>
+	<h2 class="title text-center">Produk Item</h2>
 	<?php foreach ($search_data as $value) {?>
 
 	<?php if($value->pro_status==1){?>

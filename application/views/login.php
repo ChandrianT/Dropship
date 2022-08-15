@@ -51,7 +51,7 @@
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                            <input name="remember" type="checkbox" value="Remember Me">Ingat Saya
                         </label>
                     </div>
                     <button class="btn btn-lg btn-success btn-block" name="remember" type="checkbox" value="Remember Me">Login</button>

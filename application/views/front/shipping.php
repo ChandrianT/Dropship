@@ -5,13 +5,13 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="<?php echo base_url();?>">Home</a></li>
+				  <li><a href="<?php echo base_url();?>">Dashboard</a></li>
 				  <li class="active">Check out</li>
 				</ol>
 			</div><!--/breadcrums-->
 
 			<div class="step-one">
-				<h2 class="heading">Step2</h2>
+				<h2 class="heading">Langkah Selanjutnya</h2>
 			</div>
 		
 			<div class="shopper-informations">
@@ -24,7 +24,7 @@
 							<h5 class="shipping_info">
                    			 <?php echo validation_errors();?>
 			              </h5>
-							<p>Shipping Address</p>
+							<p>Alamat Pengiriman</p>
 							<div class="form-two">
 								<form action="<?php echo base_url()?>insert-shipping" method="post" name="shiping_info">
 									<input type="text" placeholder="Name" name="cus_name">

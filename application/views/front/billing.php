@@ -5,13 +5,13 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="<?php echo base_url();?>">Home</a></li>
+				  <li><a href="<?php echo base_url();?>">Dashboard</a></li>
 				  <li class="active">Check out</li>
 				</ol>
 			</div><!--/breadcrums-->
 
 			<div class="step-one">
-				<h2 class="heading">Step2</h2>
+				<h2 class="heading">langkah Selanjutnya</h2>
 			</div>
 		
 			<div class="shopper-informations">
@@ -24,7 +24,7 @@
 							<h5 class="billing_info">
                    			 <?php echo validation_errors();?>
 			              </h5>
-							<p>Billing Address</p>
+							<p>Alamat</p>
 							
 							<div class="form-two">
 								<form action="<?php echo base_url()?>update-billing" method="post" name="billing_info">
@@ -72,7 +72,7 @@
 									<option value="Papua">Papua</option>
 									</select>
 									<input type="text" placeholder="Zip" name="cus_zip" value="<?php echo $cus_info->cus_zip?>">
-									Shipping Same As Billing
+									Alamat pengiriman sama seperti penagihan
 									<input type="checkbox" name="shipping_info" value="on">
 									<input type="submit" value="Save & Continue" class="btn btn-primary">
 								</form>

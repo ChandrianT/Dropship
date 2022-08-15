@@ -66,93 +66,8 @@
 
 	<section id="do_action">
 		<div class="container">
-			<div class="heading">
-				<h3>What would you like to do next?</h3>
-				<p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
-			</div>
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="chose_area">
-						<ul class="user_option">
-							<li>
-								<input type="checkbox">
-								<label>Use Coupon Code</label>
-							</li>
-							<li>
-								<input type="checkbox">
-								<label>Use Gift Voucher</label>
-							</li>
-							<li>
-								<input type="checkbox">
-								<label>Estimate Shipping & Taxes</label>
-							</li>
-						</ul>
-						<ul class="user_info">
-							<li class="single_field">
-								<label>Provinsi:</label>
-								<select>
-									<option>Select	</option>
-									<option>Jawa Barat</option>
-									<option>Jawa Tengah</option>
-									<option>Jawa Timur</option>
-									<option>DKI Jakarta</option>
-									<option>Banten</option>
-									<option>DI Yogakarta</option>
-									<option>Bali</option>
-									<option>Nanggore Aceh Darussalam</option>
-									<option>Sumatera Utara</option>
-									<option>Sumatera Selatan</option>
-									<option>Sumatera Barat</option>
-									<option>Bengkulu</option>
-									<option>Riau</option>
-									<option>Kepulauan Riau</option>
-									<option>Jambi</option>
-									<option>Lampung</option>
-									<option>Bangka Belitung</option>
-									<option>Kalimantan Barat</option>
-									<option>Kalimantan Timur</option>
-									<option>Kalimantan Utara</option>
-									<option>Kalimantan Selatan</option>
-									<option>Kalimantan Tengah</option>
-									<option>Nusa Tenggara Timur</option>
-									<option>Nusa Tenggara Barat</option>
-									<option>Gorontalo</option>
-									<option>Sulawesi Barat</option>
-									<option>Sulawesi Tengah</option>
-									<option>Sulawesi Tenggara</option>
-									<option>Sulawesi Utara</option>
-									<option>Sulawesi Selatan</option>
-									<option>Maluku Utara</option>
-									<option>Maluku</option>
-									<option>Papua Barat</option>
-									<option>Papua</option>
-								</select>
-								
-							</li>
-							<li class="single_field">
-								<label>Kota:</label>
-								<select>
-									<option>Select</option>
-									<option>Bandung</option>
-									<option>Kuningan</option>
-									<option>Cililin</option>
-									<option>Padalarang</option>
-									<option>Baleendah</option>
-									<option>Cimahi</option>
-									<option>Yogyakarta</option>
-								</select>
-							
-							</li>
-							<li class="single_field zip-field">
-								<label>Zip Code:</label>
-								<input type="text">
-							</li>
-						</ul>
-						<a class="btn btn-default update" href="">Get Quotes</a>
-						<a class="btn btn-default check_out" href="">Continue</a>
-					</div>
-				</div>
-				<div class="col-sm-6">
+			
+				<div class="col-sm-13">
 					<div class="total_area">
 						<ul>
 							<?php 
@@ -178,19 +93,17 @@
 									$shiping = 0;
 								}
 							?>
-							<li>Shipping Cost <span>Rp. <?php echo $shiping?></span></li>
+							<li>Biaya<span>Rp. <?php echo $shiping?></span></li>
 							<?php $g_total = $cart_total+$tax+$shiping;?>
 							<li>Total <span>
 								<?php
 									$gdata = array();
 									$gdata['g_total'] = $g_total;
 									$this->session->set_userdata($gdata);
-							 		echo "$$g_total";
+							 		echo "Rp. $g_total";
 							 	?>
 							 </span></li>
-						</ul>
-							<form action="<?php echo base_url()?>update-cart-qty" method="post" >	
-							<input type="submit" class="btn btn-default update"  value="Update"/>
+						</ul>	
 							<?php $customer_id = $this->session->userdata('cus_id');?>
 							<?php $shipping_id = $this->session->userdata('shipping_id');?>
 							<?php if($this->cart->total_items()!=Null && $customer_id!=NULL && $shipping_id!=NULL){?>
