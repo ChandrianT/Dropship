@@ -5,7 +5,7 @@
         <div class="row">
            <!-- page header -->
            <div class="col-lg-12">
-            <h1 class="page-header">Forms Element</h1>
+            <h1 class="page-header">Halaman Tambah Produk</h1>
         </div>
         <!--end page header -->
     </div>
@@ -21,7 +21,7 @@
                      ?>                       
                 </h4>
                 <div class="panel-heading">
-                    Add new Product
+                    Tambahkan Produk Baru
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -29,18 +29,18 @@
                            <h5 style='color:red'> <?php echo validation_errors();?></h5>
                              <?php echo form_open_multipart('save-product','');?>
                                 <div class="form-group">
-                                    <label>Add Product Title</label>
+                                    <label>Tambahkan Produk Baru</label>
                                     <input type="text" class="form-control" value="" name="pro_title" required="">
                                 </div>
                                  <div class="form-group">
-                                    <label>Add Product Description</label>
+                                    <label>Tambahkan Deskripsi Produk</label>
                                     <textarea  id="ck" class="form-control" rows="3" name="pro_desc"></textarea>
                                     <script>CKEDITOR.replace('ck')</script>
                                 </div>
                                  <div class="form-group">
-                                    <label>Select Category</label>
+                                    <label>Pilih Kategori</label>
                                     <select class="form-control" name="pro_cat">
-                                        <option>Select One</option>
+                                        <option>Pilih Salah Satu</option>
                                         <?php
                                          foreach ($all_cat as $category) {  ?>
                                         <option value="<?php echo $category->category_id;?>"><?php echo $category->category_name?></option>
@@ -48,7 +48,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Sub Category Auto Selected</label>
+                                    <label>Sub Kategori Terpilih Secara otomatis</label>
                                     <select class="form-control" name="pro_sub_cat">
                                             <?php foreach ($all_sub_cat as $sub_cat) {?>
                                             <option  value="<?php echo $sub_cat->sub_cat_id?>">
@@ -58,9 +58,9 @@
                                     </select>
                                 </div>
                                  <div class="form-group">
-                                    <label>Select Brand</label>
+                                    <label>Pilih Brand</label>
                                     <select class="form-control" name="pro_brand">
-                                        <option>Select One</option>
+                                        <option>Pilih Salah Satu</option>
                                         <?php $all_brand = $this->ProductModel->get_all_brand()?>
                                         <?php foreach ($all_brand as $brand) { ?>
                                         <option value="<?php echo $brand->brand_id;?>"><?php echo $brand->brand_name;?></option>
@@ -68,43 +68,43 @@
                                     </select>
                                 </div>
                                  <div class="form-group">
-                                    <label>Add Product Price</label>
+                                    <label>Tammbahkan Harga Produk</label>
                                     <input type="number" class="form-control" value="" name="pro_price" required="">
                                 </div>
                                  <div class="form-group">
-                                    <label>Add Product Quantity</label>
+                                    <label>Tambahkan Jumlah Produk</label>
                                     <input type="number" class="form-control" value="" name="pro_quantity" required="">
                                 </div>
                                 <div class="form-group">
-                                    <label>Product Status</label>
+                                    <label>Status Produk</label>
                                     <select class="form-control" name="pro_status">
-                                        <option>Select One</option>
+                                        <option>Pilih Salah Satu</option>
                                         <option value="1">Enable</option>
                                         <option value="2">Disable</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Product Availability</label>
+                                    <label>Ketersediaan Produk</label>
                                     <select class="form-control" name="pro_availability">
-                                        <option>Select One</option>
-                                        <option value="1">In Stock</option>
-                                        <option value="2">Out Of Stock</option>
-                                        <option value="3">Up Comming</option>
+                                        <option>Pilih Salah Satu</option>
+                                        <option value="1">Ada</option>
+                                        <option value="2">Habis</option>
+                                        <option value="3">Pre Order</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Upload Product Image</label>
+                                    <label>Upload Gambar Produk</label>
                                     <input type="file" name="pro_image">
                                 </div>
                                  <div class="form-group">
                                     <label>Top Product</label>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="top_product" value="1">Select top product
+                                            <input type="checkbox" name="top_product" value="1">Pilih top product
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                             <?php echo form_close();?>
                         </div>
                     </div>

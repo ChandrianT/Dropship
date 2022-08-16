@@ -103,9 +103,9 @@
 					<form action="<?php echo base_url()?>place-order" method="post" >
 						<div class="payment-options">
 							<div class="order-message">
-								<p class="alert alert-warning">Shipping Order</p>
+								<p class="alert alert-warning">Pesanan Pengiriman</p>
 								<?php echo $this->session->flashdata("flash_msg")?>
-								<textarea name="payment_message"  placeholder="Notes about your order, Special Notes for Delivery" rows="10"></textarea>
+								<textarea name="payment_message"  placeholder="Catatan tentang pesanan kamu untuk toko" rows="10"></textarea>
 							</div>	
 							<span>
 								<label><input type="radio"  name="payment_gateway" value="cash_on_delivery"> Cash on delivery</label>
@@ -114,7 +114,7 @@
 								<label><input type="radio"  name="payment_gateway" value="paypal_payment"> Paypal</label>
 							</span> -->
 							<span>
-								<input type="submit" name="btn" class="btn btn-primary" value="Place Order">
+								<input type="submit" name="btn" class="btn btn-primary" value="Pesan">
 							</span>
 						</div>
 					</form>

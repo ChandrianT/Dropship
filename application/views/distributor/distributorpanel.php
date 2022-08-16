@@ -103,25 +103,25 @@
                         <a href="<?php echo base_url();?>distributordashboard"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                       <li>
-                        <a href="#"><i class="fa fa-product-hunt fa-fw"></i> Products Option<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-product-hunt fa-fw"></i> <span class="fa arrow"></span>Produk</a>
                         <ul class="nav nav-second-level">
                             <li>
-                                 <a href="<?php echo base_url();?>dsbadd-product"><i class=""></i>Add Product</a>
+                                 <a href="<?php echo base_url();?>dsbadd-product"><i class=""></i>Tambah Produk</a>
                              </li>
                             <li>
-                                 <a href="<?php echo base_url();?>dsbproduct-list"><i class=""></i>Product List</a>
+                                 <a href="<?php echo base_url();?>dsbproduct-list"><i class=""></i>List Produk</a>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Brand Option<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Brand<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url();?>dsbadd-brand">Add Brand</a>
+                                <a href="<?php echo base_url();?>dsbadd-brand">Tambah Brand</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url();?>dsbbrand-list">Brand List</a>
+                                <a href="<?php echo base_url();?>dsbbrand-list">List Brand</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->

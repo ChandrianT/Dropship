@@ -3,7 +3,7 @@
     <div class="row">
          <!--  page header -->
         <div class="col-lg-12">
-            <h1 class="page-header">Tables</h1>
+            <h1 class="page-header">TABEL</h1>
         </div>
          <!-- end  page header -->
     </div>
@@ -12,7 +12,7 @@
             <!-- Advanced Tables -->
             <div class="panel panel-default">
                 <div class="panel-heading">
-                     Category Tables
+                     TABEL KATEGORI
                 </div>
                 <p class="text-success"> <?php if(isset($success_message)){
                   echo $success_message;
@@ -27,10 +27,10 @@
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                                 <tr>
-                                    <th>Serial No</th>
-                                    <th>Category Name</th>
-                                    <th>Category Status</th>
-                                    <th>Action</th>
+                                    <th>No. Serial</th>
+                                    <th>Nama Kategori</th>
+                                    <th>Status Kategori</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,7 +47,7 @@
                                     <td><?php echo $value->category_status;?></td>
                                    <td>
                                         <a class="btn btn-info" href="<?php  echo base_url();?>edit-category/<?php echo $value->category_id;?>">Edit</a>
-                                        <a class="btn btn-danger" href="<?php  echo base_url();?>delete-category/<?php echo $value->category_id;?>">Delete</a>
+                                        <a class="btn btn-danger" href="<?php  echo base_url();?>delete-category/<?php echo $value->category_id;?>">Hapus</a>
                                     </td> 
                                     
                                 </tr>

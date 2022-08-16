@@ -4,7 +4,7 @@
         <div class="row">
            <!-- page header -->
            <div class="col-lg-12">
-            <h1 class="page-header">Forms Element</h1>
+            <h1 class="page-header">Halaman Pendaftaran Admin</h1>
         </div>
         <!--end page header -->
     </div>
@@ -17,7 +17,7 @@
                  }?>
              </p>
                 <div class="panel-heading">
-                    Register New user
+                    Pendaftaran Pengguna Baru
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -25,41 +25,41 @@
                            <h5 style='color:red'> <?php echo validation_errors();?></h5>
                                 <?php echo form_open('Admin/makeadmin','');?>
                                 <div class="form-group">
-                                    <label>Admin Name</label>
+                                    <label>Nama Admin</label>
                                     <input type="text" class="form-control" value="<?php echo set_value('username')?>" name="username" required="">
                                 </div>
                                  <div class="form-group">
-                                    <label>Admin Email</label>
+                                    <label>Email Admin</label>
                                     <input type="email" class="form-control" value="<?php echo set_value('user_email')?>" name="user_email" required="">
                                 </div>
                                  <div class="form-group">
-                                    <label>Admin Password</label>
+                                    <label>Password Admin</label>
                                     <input type="password" class="form-control" name="user_password" required="">
                                 </div>
                                  <div class="form-group">
-                                    <label>Confirm Password</label>
+                                    <label>Konfirmasi Password</label>
                                     <input type="password" name="confirm_password" class="form-control" required="">
                                 </div>
                                 <div class="form-group">
-                                    <label>Select User Role</label>
+                                    <label>Pilih Role Pengguna</label>
                                     <select class="form-control" name="user_role">
-                                        <option>Select One</option>
+                                        <option>Pilih Salah Satu</option>
                                         <option value="1">Admin</option>
                                         <option value="2">Distributor</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Select Brand</label>
+                                    <label>Pilih Brand</label>
                                     <select class="form-control" name="user_brand">
-                                        <option>Select One</option>
+                                        <option>Pilih Salah Satu</option>
                                         <?php $all_brand = $this->ProductModel->get_all_brand()?>
                                         <?php foreach ($all_brand as $brand) { ?>
                                         <option value="<?php echo $brand->brand_id;?>"><?php echo $brand->brand_name;?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Make User</button>
-                                <button type="reset" class="btn btn-success">Reset Form</button>
+                                <button type="submit" class="btn btn-primary">Membuat Akun</button>
+                                <button type="reset" class="btn btn-success">Reset</button>
                         
                             <?php echo form_close();?>
                         </div>

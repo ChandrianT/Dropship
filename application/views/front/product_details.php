@@ -65,6 +65,7 @@
 			</p>
 			<!-- <p><b>Condition:</b> New</p> -->
 			<p><b>Brand:</b> <?php echo $product_info->brand_name?></p>
+			<p><b>Kategori:</b> <?php echo $product_info->pro_sub_cat?></p>
 			<p><b>Deskripsi:</b> <?php echo $product_info->pro_desc?></p>
 			<a href=""><img src="<?php echo base_url()?>assets/front/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 		</div><!--/product-information-->

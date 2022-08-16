@@ -3,7 +3,7 @@
     <div class="row">
          <!--  page header -->
         <div class="col-lg-12">
-            <h1 class="page-header">Tables</h1>
+            <h1 class="page-header">TABEL</h1>
         </div>
          <!-- end  page header -->
     </div>
@@ -12,7 +12,7 @@
             <!-- Advanced Tables -->
             <div class="panel panel-default">
                 <div class="panel-heading">
-                     Brand Tables
+                     TABEL BRAND
                 </div>
                 <p class="text-success"> <?php if(isset($success_message)){
                   echo $success_message;
@@ -27,9 +27,9 @@
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                                 <tr>
-                                    <th>Serial No</th>
-                                    <th>Brand Name</th>
-                                    <th>Action</th>
+                                    <th>No. Serial</th>
+                                    <th>Nama Brand</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -4,7 +4,7 @@
         <div class="row">
            <!-- page header -->
            <div class="col-lg-12">
-            <h1 class="page-header">Forms Element</h1>
+            <h1 class="page-header">Halaman Tambah Sub Kategori</h1>
         </div>
         <!--end page header -->
     </div>
@@ -14,7 +14,7 @@
             <div class="panel panel-default">
                
                 <div class="panel-heading">
-                    Add new Sub Category
+                    Tambahkan Sub Kategori
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -23,7 +23,7 @@
                                 <?php echo form_open('save-sub-category','');?>
                                  <?php $cat = $this->CategoryModel->get_all_category();?>
                                  <select class="form-control" name="category_sub_id">
-                                        <option>Select One</option>
+                                        <option>Pilih Salah Satu</option>
                                        
                                          <?php
                                          foreach ($cat as $category) {  ?>
@@ -31,11 +31,11 @@
                                         <?php } ?>
                                 </select>
                                 <div class="form-group">
-                                    <label>Add Sub Category</label>
+                                    <label>Tambahkan Sub Kategori</label>
                                     <input type="text" class="form-control" value="" name="sub_category_name" required="">
                                 </div>
                                  
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                             <?php echo form_close();?>
                         </div>
                     </div>

@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard Template</title>
+    <title>Admin Dashboard</title>
     <!-- Core CSS - Include with every page -->
     <script src="<?php echo base_url()?>assets/back/plugins/jquery-1.10.2.js"></script>
     <link href="<?php echo base_url()?>assets/back/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
@@ -54,12 +54,12 @@
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>Profile</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Pengaturan</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="<?php echo base_url();?>Login/adminlogout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        <li><a href="<?php echo base_url();?>Login/adminlogout"><i class="fa fa-sign-out fa-fw"></i>Keluar</a>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
@@ -108,45 +108,45 @@
                         <a href="<?php echo base_url();?>dashboard"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url();?>register-form"><i class="fa fa-user-plus fa-fw"></i>Register User</a>
+                        <a href="<?php echo base_url();?>register-form"><i class="fa fa-user-plus fa-fw"></i>Daftarkan User</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-tags fa-fw"></i> Category Option<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-tags fa-fw"></i>Pilihan Kategori<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                 <a href="<?php echo base_url();?>add-category"><i class=""></i>Add Category</a>
+                                 <a href="<?php echo base_url();?>add-category"><i class=""></i>Tambah Kategori</a>
                              </li>
                              <li>
-                                 <a href="<?php echo base_url();?>add-sub-category"><i class=""></i>Add Sub Category</a>
+                                 <a href="<?php echo base_url();?>add-sub-category"><i class=""></i>Tambahkan Sub Kategori</a>
                              </li>
                             <li>
-                                 <a href="<?php echo base_url();?>category-list"><i class=""></i>Category List</a>
+                                 <a href="<?php echo base_url();?>category-list"><i class=""></i>Daftar Kategori</a>
                             </li>
                             <li>
-                                 <a href="<?php echo base_url();?>sub-category-list"><i class=""></i>Sub Category List</a>
+                                 <a href="<?php echo base_url();?>sub-category-list"><i class=""></i>Daftar Sub Kategori</a>
                             </li>
                         </ul>
                     </li>
                       <li>
-                        <a href="#"><i class="fa fa-product-hunt fa-fw"></i> Products Option<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-product-hunt fa-fw"></i> Produk<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                 <a href="<?php echo base_url();?>add-product"><i class=""></i>Add Product</a>
+                                 <a href="<?php echo base_url();?>add-product"><i class=""></i>Tambah Produk</a>
                              </li>
                             <li>
-                                 <a href="<?php echo base_url();?>product-list"><i class=""></i>Product List</a>
+                                 <a href="<?php echo base_url();?>product-list"><i class=""></i>Daftar Produk</a>
                             </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Brand Option<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Brand<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url();?>add-brand">Add Brand</a>
+                                <a href="<?php echo base_url();?>add-brand">Tambah Brand</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url();?>brand-list">Brand List</a>
+                                <a href="<?php echo base_url();?>brand-list">Daftar Brand</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->

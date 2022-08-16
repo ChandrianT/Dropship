@@ -20,7 +20,7 @@
                  </p>
                  <div class="alert alert-success">
     <?php //echo $this->session->flashdata('flsh_msg'); ?>
-        <h4 class="success"><?php echo $this->session->flashdata('dsbproduct_delete')?></h4>
+        <h4 class="success"><?php echo $this->session->flashdata('product_delete')?></h4>
     <?php echo $this->session->flashdata('flsh_msg'); ?>
 </div>
                 <div class="panel-body">
@@ -28,13 +28,13 @@
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                                 <tr>
-                                    <th>Serial No</th>
-                                    <th>Product Name</th>
-                                    <th>Product Image</th>
-                                    <th>Product Status</th>
-                                    <th>Product Availability</th>
-                                    <th>Product Price</th>
-                                    <th>Action</th>
+                                    <th>No. Serial</th>
+                                    <th>Nama Produk</th>
+                                    <th>Gambar Produk</th>
+                                    <th>Status Produk</th>
+                                    <th>Ketersediaan Produk</th>
+                                    <th>Harga Produk</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -68,8 +68,8 @@
                                     </td>
                                     <td><?php echo $value->pro_price;?></td>
                                    <td>
-                                        <a class="btn btn-info" href="<?php echo base_url()?>dsbedit-product/<?php echo $value->pro_id?>">Edit</a>
-                                        <a class="btn btn-danger" href="<?php echo base_url()?>dsbdelete-product/<?php echo $value->pro_id?>">Delete</a>
+                                        <a class="btn btn-info" href="<?php echo base_url()?>edit-product/<?php echo $value->pro_id?>">Edit</a>
+                                        <a class="btn btn-danger" href="<?php echo base_url()?>delete-product/<?php echo $value->pro_id?>">Hapus</a>
                                     </td> 
                                     
                                 </tr>

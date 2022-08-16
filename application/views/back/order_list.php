@@ -3,7 +3,7 @@
     <div class="row">
          <!--  page header -->
         <div class="col-lg-12">
-            <h1 class="page-header">Tables</h1>
+            <h1 class="page-header">TABEL</h1>
         </div>
          <!-- end  page header -->
     </div>
@@ -12,7 +12,7 @@
             <!-- Advanced Tables -->
             <div class="panel panel-default">
                 <div class="panel-heading">
-                     Order Tables
+                     TABEL ORDER
                 </div>
                 <p class="text-success"> <?php if(isset($success_message)){
                   echo $success_message;
@@ -27,15 +27,15 @@
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                                 <tr>
-                                    <th width="5%">SL No</th>
-                                    <th width="5%">Order No</th>
-                                    <th width="15%">Customer Name</th>
-                                    <th width="15%">Customer Phone</th>
+                                    <th width="8%">No. SL</th>
+                                    <th width="8%">No. Order</th>
+                                    <th width="15%">Nama Pembeli</th>
+                                    <th width="12%">No. Handphone</th>
                                    
                                     <th width="10%">Total Order</th>
-                                    <th width="10%">Order Status</th>
-                                    <th width="10%">Payment Status</th>
-                                    <th class="text-center" width="30%">Action</th>
+                                    <th width="10%">Status Order</th>
+                                    <th width="10%">Status Pembayaran</th>
+                                    <th class="text-center" width="30%">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,9 +55,9 @@
                                     <td><?php echo $value->order_status;?></td>
                                     <td><?php echo $value->payment_status;?></td>
                                    <td>
-                                        <a class="btn btn-info" href="<?php echo base_url()?>view-order/<?php echo $value->order_id?>">View</a>
+                                        <a class="btn btn-info" href="<?php echo base_url()?>view-order/<?php echo $value->order_id?>">Detail</a>
                                         <a class="btn btn-warning" href="">Edit</a>
-                                        <a onclick="alert('Are Your Sure to Delete')" class="btn btn-info" href="<?php echo base_url()?>delete-order/<?php echo $value->order_id?>">Delete</a>
+                                        <a onclick="alert('Are Your Sure to Delete')" class="btn btn-info" href="<?php echo base_url()?>delete-order/<?php echo $value->order_id?>">Hapus</a>
                                         <a class="btn btn-success" href="">Download</a>
                                     </td> 
                                     
