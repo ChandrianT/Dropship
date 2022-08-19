@@ -72,7 +72,7 @@
 									<option value="Papua">Papua</option>
 									</select>
 									<input type="text" placeholder="Zip" name="cus_zip" value="<?php echo $cus_info->cus_zip?>">
-									Alamat pengiriman sama seperti penagihan
+									Konfirmasi
 									<input type="checkbox" name="shipping_info" value="on">
 									<input type="submit" value="Save & Continue" class="btn btn-primary">
 								</form>

@@ -106,7 +106,6 @@
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="<?php echo base_url();?>" class="active">Dashboard</a></li>
 								<li><a href="<?php echo base_url()?>products">Produk</a></li>
-								<li><a href="<?php echo base_url()?>brands">Brand</a></li>
 								<?php if($this->cart->total_items()!=Null && $customer_id!=NULL){
 													?>
 								<li>	

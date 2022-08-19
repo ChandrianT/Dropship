@@ -4,7 +4,7 @@
         <div class="row">
            <!-- page header -->
            <div class="col-lg-12">
-            <h1 class="page-header">Halaman Pendaftaran Admin</h1>
+            <h1 class="page-header">Halaman Pendaftaran</h1>
         </div>
         <!--end page header -->
     </div>
@@ -25,15 +25,15 @@
                            <h5 style='color:red'> <?php echo validation_errors();?></h5>
                                 <?php echo form_open('Admin/makeadmin','');?>
                                 <div class="form-group">
-                                    <label>Nama Admin</label>
+                                    <label>Nama</label>
                                     <input type="text" class="form-control" value="<?php echo set_value('username')?>" name="username" required="">
                                 </div>
                                  <div class="form-group">
-                                    <label>Email Admin</label>
+                                    <label>Email</label>
                                     <input type="email" class="form-control" value="<?php echo set_value('user_email')?>" name="user_email" required="">
                                 </div>
                                  <div class="form-group">
-                                    <label>Password Admin</label>
+                                    <label>Password</label>
                                     <input type="password" class="form-control" name="user_password" required="">
                                 </div>
                                  <div class="form-group">
