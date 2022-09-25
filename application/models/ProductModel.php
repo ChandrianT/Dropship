@@ -69,7 +69,14 @@ class ProductModel extends CI_Model {
 			->order_by('pro_id','desc')
 			->get()
 			->result();
+			
 			return $data;
+	}
+	public function get_some_product(){
+		$a = $this->session->username;
+		$sql = "SELECT * FROM tbl_product where pro_brand = (select user_brand from tbl_user where username='$a') order by pro_id desc;";
+		$data = $this->db->query($sql);
+		return $data->result_array();
 	}
 	public function edit_product_model($product_id){
 		$data = $this->db->select('*')

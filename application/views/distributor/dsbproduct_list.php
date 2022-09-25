@@ -40,17 +40,17 @@
                             <tbody>
                                 <?php
                                 $i = 0;
-                                if(isset($all_product)){
-                                  foreach ($all_product as $value){
+                                if(isset($user_brand)){
+                                  foreach ($user_brand as $value){
                                     $i++;
 
                                 ?>
                                 <tr class="gradeC">
                                     <td><?php echo $i;?></td>
-                                    <td><?php echo $value->pro_title;?></td>
-                                    <td><img src="<?php echo base_url().$value->pro_image;?>" width="80px" height="80px"/></td>
+                                    <td><?php echo $value['pro_title'];?></td>
+                                    <td><img src="<?php echo base_url().$value['pro_image'];?>" width="80px" height="80px"/></td>
                                     <td>
-                                       <?php if($value->pro_status==1){
+                                       <?php if($value['pro_status']==1){
                                             echo "Enable";
                                        }else{
                                              echo "Disable";
@@ -58,18 +58,18 @@
                                             
                                         </td>
                                     <td>
-                                         <?php if($value->pro_availability==1){
+                                         <?php if($value['pro_availability']==1){
                                             echo "In Stock";
-                                       }elseif($value->pro_availability==2){
+                                       }elseif($value['pro_availability']==2){
                                              echo "Out Of Stock";
                                        }else{
                                             echo "Up Coming";
                                        }?>
                                     </td>
-                                    <td><?php echo $value->pro_price;?></td>
+                                    <td><?php echo $value['pro_price'];?></td>
                                    <td>
-                                        <a class="btn btn-info" href="<?php echo base_url()?>edit-product/<?php echo $value->pro_id?>">Edit</a>
-                                        <a class="btn btn-danger" href="<?php echo base_url()?>delete-product/<?php echo $value->pro_id?>">Hapus</a>
+                                        <a class="btn btn-info" href="<?php echo base_url()?>edit-product/<?php echo $value['pro_id']?>">Edit</a>
+                                        <a class="btn btn-danger" href="<?php echo base_url()?>delete-product/<?php echo $value['pro_id']?>">Hapus</a>
                                     </td> 
                                     
                                 </tr>

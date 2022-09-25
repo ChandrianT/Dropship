@@ -107,5 +107,30 @@ class CheckoutModel extends CI_Model {
 
 
 	}
+
+	public function get_transaction()
+    {
+        $query = $this->db->get('tbl_membership_payment');
+        return $query->result();
+    }
+
+	public function update($status, $id){
+		$updateData = [
+            'transaction_status' => $status
+        ];
+        $this->db->where('order_id', $id);
+        $this->db->update('tbl_membership_payment', $updateData);
+
+        return false;
+	}
+	public function updateStatus($email){
+		$updateData = [
+            'membership' => 1
+        ];
+        $this->db->where('cus_email', $email);
+        $this->db->update('tbl_customer', $updateData);
+
+        return false;
+	}
 	
 }

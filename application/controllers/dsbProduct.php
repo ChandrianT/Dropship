@@ -20,6 +20,7 @@ class dsbProduct extends CI_Controller{
 		$this->load->view('distributor/distributorpanel',$data);
 	}
 	public function show_product_list(){
+		$data['user_brand'] = $this->ProductModel->get_some_product();
 		$data['all_product'] = $this->ProductModel->get_all_product();
 		$data['main_content'] = $this->load->view('distributor/dsbproduct_list',$data,true);
 		$this->load->view('distributor/distributorpanel',$data);
