@@ -89,6 +89,8 @@ class Checkout extends CI_Controller {
 	}
 	public function membership(){
 		$data['trx'] = $this->CheckoutModel->get_transaction();
+		$customer_id= $this->session->userdata("cus_id");
+		$data['cus_info'] = $this->CheckoutModel->select_customer_info_by_id($customer_id);
 		foreach ($data['trx'] as $row) {
 			$b = $row->order_id;
 			$email = $row->customer_email;
@@ -98,12 +100,15 @@ class Checkout extends CI_Controller {
 
 			if($ress->transaction_status == "settlement"){
 				$u = $this->CheckoutModel->updateStatus($email);
-			}
-
-
-			
+			}	
 			
 		}
+
+		$membershipCheck = $data['cus_info']->membership;
+		if($membershipCheck == 1){
+			redirect('');
+		}
+		else{
 		$data= array();
 		$cus_email = $this->input->post('cus_email',true);
 		$customer_id= $this->session->userdata("cus_id");
@@ -111,6 +116,7 @@ class Checkout extends CI_Controller {
 		$data['cus_info'] = $this->CheckoutModel->select_customer_info_by_id($customer_id);
 		$data['main_content'] = $this->load->view('front/membership_pay',$data,true);
 		$this->load->view('front/membership',$data);
+		}
 	}
 	public function shipping(){
 		 

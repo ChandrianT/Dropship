@@ -6,6 +6,11 @@ class Home extends CI_Controller {
 		parent::__construct();
 		$this->load->model("HomeModel");
 		$this->load->library('pagination');
+		$this->load->model("CheckoutModel");
+		$this->load->model("MailModel");
+		$params = array('server_key' => 'SB-Mid-server-S4eKvzyVSN65Knax_X63U7JZ', 'production' => false);
+		$this->load->library('veritrans');
+		$this->veritrans->config($params);
 	}
 
 	public function index(){
@@ -48,6 +53,22 @@ class Home extends CI_Controller {
 		$this->load->view('front/index',$data);
 	}
 	public function homepage(){
+		$data['trx'] = $this->CheckoutModel->get_transaction();
+		$customer_id= $this->session->userdata("cus_id");
+		$data['cus_info'] = $this->CheckoutModel->select_customer_info_by_id($customer_id);
+		foreach ($data['trx'] as $row) {
+			$b = $row->order_id;
+			$email = $row->customer_email;
+			$ress = $this->veritrans->status($b);
+			$transaction_status = $ress->transaction_status;
+			$update = $this->CheckoutModel->update($transaction_status, $row->order_id);
+
+			if($ress->transaction_status == "settlement"){
+				$u = $this->CheckoutModel->updateStatus($email);
+			}	
+			
+		}
+
 		$data =array();
 		$data['slider'] = $this->load->view('front/slider','',true);
 		$data['recommended'] = $this->load->view('front/recommended','',true);
