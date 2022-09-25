@@ -131,6 +131,7 @@ $route['checkout'] = 'Checkout/checkout';
 $route['customer-registration'] = 'Checkout/customer_registration';
 $route['customer-login'] = 'Checkout/customer_login';
 $route['billing'] = 'Checkout/billing';
+$route['membership'] = 'Checkout/membership';
 $route['shipping'] = 'Checkout/shipping';
 $route['update-billing'] = 'Checkout/update_billing';
 $route['insert-shipping'] = 'Checkout/insert_shipping';

@@ -6,6 +6,9 @@ class Checkout extends CI_Controller {
 		parent::__construct();
 		$this->load->model("CheckoutModel");
 		$this->load->model("MailModel");
+		$params = array('server_key' => 'SB-Mid-server-S4eKvzyVSN65Knax_X63U7JZ', 'production' => false);
+		$this->load->library('veritrans');
+		$this->veritrans->config($params);
 	}
 	public function checkout(){
 		$data['main_content'] = $this->load->view('front/checkout','',true);
@@ -42,16 +45,37 @@ class Checkout extends CI_Controller {
 		}
 	}
 	public function customer_login(){
+		$data['trx'] = $this->CheckoutModel->get_transaction();
+		foreach ($data['trx'] as $row) {
+			$b = $row->order_id;
+			$email = $row->customer_email;
+			$ress = $this->veritrans->status($b);
+			$transaction_status = $ress->transaction_status;
+			$update = $this->CheckoutModel->update($transaction_status, $row->order_id);
+
+			if($ress->transaction_status == "settlement"){
+				$this->CheckoutModel->updateStatus($transaction_status, $email);
+			}
+			
+		}
 		$cus_email = $this->input->post('cus_email',true);
 		$cus_pass = md5($this->input->post('cus_password',true));
 		$user_details = $this->CheckoutModel->get_user_login_by_email($cus_email);
-		if($cus_pass==$user_details->cus_password){
+		if($cus_pass==$user_details->cus_password && $user_details->membership == "1"){
 			$sdata['cus_id'] = $user_details->cus_id;
 			$sdata['cus_name'] =$user_details->cus_name;
 			$sdata['cus_email'] =$user_details->cus_email;
 			$sdata['cus_id'] = $this->session->set_userdata($sdata);
 			redirect("billing");
-		}else{
+		}
+		else if($cus_pass==$user_details->cus_password && $user_details->membership == "0"){
+			$sdata['cus_id'] = $user_details->cus_id;
+			$sdata['cus_name'] =$user_details->cus_name;
+			$sdata['cus_email'] =$user_details->cus_email;
+			$sdata['cus_id'] = $this->session->set_userdata($sdata);
+			redirect("membership");
+		}
+		else{
 			$this->session->set_flashdata('flash_msg','Incorrect Email Or Password...!');
 			redirect("Checkout/checkout");
 		}
@@ -62,6 +86,31 @@ class Checkout extends CI_Controller {
 		$data['cus_info'] = $this->CheckoutModel->select_customer_info_by_id($customer_id);
 		$data['main_content'] = $this->load->view('front/billing',$data,true);
 		$this->load->view('front/index',$data);
+	}
+	public function membership(){
+		$data['trx'] = $this->CheckoutModel->get_transaction();
+		foreach ($data['trx'] as $row) {
+			$b = $row->order_id;
+			$email = $row->customer_email;
+			$ress = $this->veritrans->status($b);
+			$transaction_status = $ress->transaction_status;
+			$update = $this->CheckoutModel->update($transaction_status, $row->order_id);
+
+			if($ress->transaction_status == "settlement"){
+				$u = $this->CheckoutModel->updateStatus($email);
+			}
+
+
+			
+			
+		}
+		$data= array();
+		$cus_email = $this->input->post('cus_email',true);
+		$customer_id= $this->session->userdata("cus_id");
+		$data['cus_email'] = $cus_email;
+		$data['cus_info'] = $this->CheckoutModel->select_customer_info_by_id($customer_id);
+		$data['main_content'] = $this->load->view('front/membership_pay',$data,true);
+		$this->load->view('front/membership',$data);
 	}
 	public function shipping(){
 		 
@@ -93,12 +142,38 @@ class Checkout extends CI_Controller {
 		}
 	}
 	public function payment(){
+
+
+		$data['trx'] = $this->CheckoutModel->get_transaction();
+		foreach ($data['trx'] as $row) {
+			$b = $row->order_id;
+			$email = $row->customer_email;
+			$ress = $this->veritrans->status($b);
+			$transaction_status = $ress->transaction_status;
+			$update = $this->CheckoutModel->update($transaction_status, $row->order_id);
+
+			if($ress->transaction_status == "settlement"){
+				$this->CheckoutModel->updateStatus($transaction_status, $email);
+			}
+			
+		}
+	
 	$customer_id = $this->session->userdata('cus_id');
-	if($customer_id==NUll){
-		redirect("checkout");
-	}else{
-		$data['main_content'] = $this->load->view('front/payment','',true);
-		$this->load->view('front/index',$data);
+	$user_details = $this->CheckoutModel->select_customer_info_by_id($customer_id);
+		if($user_details->membership != "1"){
+			$sdata['cus_id'] = $user_details->cus_id;
+			$sdata['cus_name'] = $user_details->cus_name;
+			$sdata['cus_email'] = $user_details->cus_email;
+			$sdata['cus_id'] = $this->session->set_userdata($sdata);
+			redirect("membership");
+		}
+		else{
+			if($customer_id==NUll){
+				redirect("checkout");
+			}else{
+				$data['main_content'] = $this->load->view('front/payment','',true);
+				$this->load->view('front/index',$data);
+				}
 		}
 	}
 	public function customer_logout(){

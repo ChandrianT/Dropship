@@ -11,7 +11,7 @@
 			</div><!--/breadcrums-->
 
 			<div class="step-one">
-				<h2 class="heading">langkah Selanjutnya</h2>
+				<h2 class="heading">Langkah Selanjutnya</h2>
 			</div>
 		
 			<div class="shopper-informations">
