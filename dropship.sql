@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Sep 2022 pada 19.05
--- Versi server: 10.4.11-MariaDB
--- Versi PHP: 7.4.5
+-- Generation Time: Sep 25, 2022 at 07:26 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_brand`
+-- Table structure for table `tbl_brand`
 --
 
 CREATE TABLE `tbl_brand` (
@@ -33,25 +33,20 @@ CREATE TABLE `tbl_brand` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_brand`
+-- Dumping data for table `tbl_brand`
 --
 
 INSERT INTO `tbl_brand` (`brand_id`, `brand_name`) VALUES
-(6, 'ASUS'),
-(5, 'HP'),
-(7, 'DELL'),
-(8, 'SAMSUNG'),
-(9, 'LENOVO'),
-(10, 'OPPO'),
-(11, 'VIVO'),
-(12, 'APPLE'),
-(13, 'NOKIA'),
-(14, 'ACER');
+(6, 'Asus'),
+(14, 'Apple'),
+(15, 'Samsung'),
+(16, 'HP'),
+(17, 'Xiaomi');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_category`
+-- Table structure for table `tbl_category`
 --
 
 CREATE TABLE `tbl_category` (
@@ -61,20 +56,21 @@ CREATE TABLE `tbl_category` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_category`
+-- Dumping data for table `tbl_category`
 --
 
 INSERT INTO `tbl_category` (`category_id`, `category_name`, `category_status`) VALUES
-(73, 'Tablet', 1),
+(73, 'Watch', 1),
 (72, 'Laptop', 1),
-(71, 'Handphone', 1),
-(78, 'Aksesoris', 1),
+(71, 'Mobile', 1),
+(74, 'Monitor', 1),
+(75, 'Mouse', 1),
 (76, 'PC', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_contact`
+-- Table structure for table `tbl_contact`
 --
 
 CREATE TABLE `tbl_contact` (
@@ -88,7 +84,7 @@ CREATE TABLE `tbl_contact` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_contact`
+-- Dumping data for table `tbl_contact`
 --
 
 INSERT INTO `tbl_contact` (`contact_id`, `contact_name`, `contact_email`, `contact_subject`, `contact_message`, `contact_status`, `contact_date`) VALUES
@@ -103,7 +99,7 @@ INSERT INTO `tbl_contact` (`contact_id`, `contact_name`, `contact_email`, `conta
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_customer`
+-- Table structure for table `tbl_customer`
 --
 
 CREATE TABLE `tbl_customer` (
@@ -115,23 +111,64 @@ CREATE TABLE `tbl_customer` (
   `cus_address` text NOT NULL,
   `cus_city` varchar(55) NOT NULL,
   `cus_country` varchar(55) NOT NULL,
-  `cus_zip` varchar(5) NOT NULL
+  `cus_zip` varchar(5) NOT NULL,
+  `membership` tinyint(4) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_customer`
+-- Dumping data for table `tbl_customer`
 --
 
-INSERT INTO `tbl_customer` (`cus_id`, `cus_name`, `cus_email`, `cus_password`, `cus_mobile`, `cus_address`, `cus_city`, `cus_country`, `cus_zip`) VALUES
-(48, 'Sm shuvo', 'sumonsarker080@gmail.com', '25d55ad283aa400af464c76d713c07ad', '1611606484', 'Sylhet City', 'Mymensingh', 'Bangladesh', '2220'),
-(47, 'Trailer', 'Traileralltimesu@gmail.com', '25d55ad283aa400af464c76d713c07ad', '1611606484', 'Sylhet City', 'Mymensingh', 'UK', '2220'),
-(49, 'Naufal', 'Naufalnur7@gmail.com', 'b3b6d39d514d6be82cb75445fb1f3325', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', 'Bali', '40375'),
-(50, 'chandrian tubagus', 'chand@gmail.com', '25d55ad283aa400af464c76d713c07ad', '088971203725', 'PPI G10/13', 'KABUPATEN BANDUNG', 'Jawa Barat', '40375');
+INSERT INTO `tbl_customer` (`cus_id`, `cus_name`, `cus_email`, `cus_password`, `cus_mobile`, `cus_address`, `cus_city`, `cus_country`, `cus_zip`, `membership`) VALUES
+(48, 'Sm shuvo', 'sumonsarker080@gmail.com', '25d55ad283aa400af464c76d713c07ad', '1611606484', 'Sylhet City', 'Mymensingh', 'Bangladesh', '2220', 0),
+(47, 'Trailer', 'Traileralltimesu@gmail.com', '25d55ad283aa400af464c76d713c07ad', '1611606484', 'Sylhet City', 'Mymensingh', 'UK', '2220', 0),
+(49, 'Mugi Pangestu', 'mugi@gmail.com', '6e62b88940a9dd1cacdaba09e2d48132', '08993100016', 'cikandang', 'Bandung Barat', 'Jawa Barat', '40552', 0),
+(50, 'mugi pa', 'mugipangestu41@gmail.com', '6e62b88940a9dd1cacdaba09e2d48132', '89931000160', 'cikandang', 'Bandung Barat', '-- Provinsi --', '40552', 1),
+(51, 'mugi pa2', 'mugipangestu42@gmail.com', '6e62b88940a9dd1cacdaba09e2d48132', '8993100016', 'cikandang', 'Bandung Barat', '-- Provinsi --', '40552', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_order`
+-- Table structure for table `tbl_membership_payment`
+--
+
+CREATE TABLE `tbl_membership_payment` (
+  `order_id` char(20) NOT NULL,
+  `customer_name` varchar(50) DEFAULT NULL,
+  `customer_email` varchar(50) DEFAULT NULL,
+  `gross_amount` int(20) DEFAULT NULL,
+  `payment_type` varchar(20) DEFAULT NULL,
+  `transaction_time` datetime DEFAULT NULL,
+  `settlement_time` datetime DEFAULT NULL,
+  `bank` varchar(20) DEFAULT NULL,
+  `va_numbers` varchar(50) DEFAULT NULL,
+  `status_message` text DEFAULT NULL,
+  `pdf_url` text DEFAULT NULL,
+  `transaction_status` char(20) DEFAULT NULL,
+  `status_code` char(3) DEFAULT NULL,
+  `transaction_id` varchar(200) DEFAULT NULL,
+  `finish_redirect_url` text DEFAULT NULL,
+  `payment_code` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_membership_payment`
+--
+
+INSERT INTO `tbl_membership_payment` (`order_id`, `customer_name`, `customer_email`, `gross_amount`, `payment_type`, `transaction_time`, `settlement_time`, `bank`, `va_numbers`, `status_message`, `pdf_url`, `transaction_status`, `status_code`, `transaction_id`, `finish_redirect_url`, `payment_code`) VALUES
+('1525847851', 'mugi pa', 'mugipangestu41@gmail', 100000, 'bank_transfer', '2022-09-25 23:24:15', NULL, 'bca', '50463381814', 'Transaksi sedang diproses', 'https://app.sandbox.midtrans.com/snap/v1/transactions/35a58b1a-4a29-4326-957b-8baf39c57136/pdf', 'pending', '201', NULL, 'http://example.com?order_id=1525847851&status_code=201&transaction_status=pending', NULL),
+('997109778', 'mugi pa', 'mugipangestu41@gmail', 100000, 'bank_transfer', '2022-09-25 23:39:07', NULL, 'bca', '50463977822', 'Success, transaction is found', 'https://app.sandbox.midtrans.com/snap/v1/transactions/0e626d89-c92f-4e69-bec0-15147e017008/pdf', 'settlement', '200', NULL, 'http://example.com?order_id=997109778&status_code=200&transaction_status=settlement', NULL),
+('2097511621', 'mugi pa', 'mugipangestu41@gmail', 100000, 'bank_transfer', '2022-09-25 23:44:59', NULL, 'bca', '50463861538', 'Transaksi sedang diproses', 'https://app.sandbox.midtrans.com/snap/v1/transactions/10992517-2a9c-4b7e-9560-1bb2604532ac/pdf', 'settlement', '201', NULL, 'http://example.com?order_id=2097511621&status_code=201&transaction_status=pending', NULL),
+('853637942', 'mugi pa', 'mugipangestu41@gmail', 100000, 'bank_transfer', '2022-09-25 23:50:28', NULL, 'bca', '50463479026', 'Transaksi sedang diproses', 'https://app.sandbox.midtrans.com/snap/v1/transactions/52767e50-4a99-48fd-a3aa-57b4033ce488/pdf', 'settlement', '201', NULL, 'http://example.com?order_id=853637942&status_code=201&transaction_status=pending', NULL),
+('1531676564', 'mugi pa', 'mugipangestu41@gmail', 100000, 'bank_transfer', '2022-09-25 23:53:04', NULL, 'bca', '50463739510', 'Transaksi sedang diproses', 'https://app.sandbox.midtrans.com/snap/v1/transactions/42574e0f-87b3-4513-b634-476dcf5b2137/pdf', 'settlement', '201', NULL, 'http://example.com?order_id=1531676564&status_code=201&transaction_status=pending', NULL),
+('720932206', 'mugi pa', 'mugipangestu41@gmail.com', 100000, 'bank_transfer', '2022-09-26 00:18:41', NULL, 'bca', '50463271707', 'Transaksi sedang diproses', 'https://app.sandbox.midtrans.com/snap/v1/transactions/269120c2-7a05-4b03-acbf-14f59855daba/pdf', 'settlement', '201', NULL, 'http://example.com?order_id=720932206&status_code=201&transaction_status=pending', NULL),
+('1499085290', 'mugi pa2', 'mugipangestu42@gmail.com', 100000, 'bank_transfer', '2022-09-26 00:22:29', NULL, 'bca', '50463976053', 'Transaksi sedang diproses', 'https://app.sandbox.midtrans.com/snap/v1/transactions/4252be5e-5458-4aee-84c0-afaf4362558e/pdf', 'pending', '201', NULL, 'http://example.com?order_id=1499085290&status_code=201&transaction_status=pending', NULL),
+('1581921331', 'mugi pa2', 'mugipangestu42@gmail.com', 100000, 'bank_transfer', '2022-09-26 00:23:30', NULL, 'bca', '50463475496', 'Success, transaction is found', 'https://app.sandbox.midtrans.com/snap/v1/transactions/08ebbc15-5cb7-46d6-a637-ff984135c932/pdf', 'settlement', '200', NULL, 'http://example.com?order_id=1581921331&status_code=200&transaction_status=settlement', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_order`
 --
 
 CREATE TABLE `tbl_order` (
@@ -145,24 +182,21 @@ CREATE TABLE `tbl_order` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_order`
+-- Dumping data for table `tbl_order`
 --
 
 INSERT INTO `tbl_order` (`order_id`, `cus_id`, `shipping_id`, `payment_id`, `order_total`, `order_status`, `order_date`) VALUES
+(100, 47, 78, 102, 107, 'pending', '2017-12-31 17:20:20'),
 (97, 48, 76, 99, 107, 'pending', '2017-12-31 17:01:39'),
-(101, 49, 80, 103, 107, 'pending', '2022-08-10 07:40:37'),
-(102, 49, 84, 104, 1018990, 'pending', '2022-08-19 03:09:06'),
-(103, 50, 86, 105, 220300000, 'pending', '2022-08-19 06:39:35'),
-(104, 50, 86, 106, 330449000, 'pending', '2022-08-19 06:40:23'),
-(105, 50, 86, 107, 330449000, 'pending', '2022-08-19 06:40:25'),
-(106, 50, 86, 108, 0, 'pending', '2022-08-19 06:40:27'),
-(107, 49, 86, 109, 2550010, 'pending', '2022-08-19 06:41:53'),
-(108, 49, 87, 110, 5100010, 'pending', '2022-08-19 06:54:40');
+(101, 49, 79, 103, 107, 'pending', '2022-09-17 16:56:52'),
+(102, 50, 83, 104, 30.6, 'pending', '2022-09-25 07:48:29'),
+(103, 50, 86, 105, 107, 'pending', '2022-09-25 17:21:30'),
+(104, 51, 87, 106, 30.6, 'pending', '2022-09-25 17:24:10');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_order_details`
+-- Table structure for table `tbl_order_details`
 --
 
 CREATE TABLE `tbl_order_details` (
@@ -175,22 +209,21 @@ CREATE TABLE `tbl_order_details` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_order_details`
+-- Dumping data for table `tbl_order_details`
 --
 
 INSERT INTO `tbl_order_details` (`order_details_id`, `order_id`, `product_id`, `product_name`, `product_price`, `sales_quantity`) VALUES
+(125, 100, 53, 'Samsung j7', 100, 1),
 (119, 97, 53, 'Samsung j7', 100, 1),
 (126, 101, 53, 'Samsung j7', 100, 1),
-(127, 102, 56, 'Asus Monitor', 999000, 1),
-(128, 103, 60, 'ACER SWIFT 3 Infinity 4 ', 10799000, 20),
-(129, 104, 60, 'ACER SWIFT 3 Infinity 4 ', 10799000, 30),
-(130, 107, 57, 'Samsung Laptop', 2500000, 1),
-(131, 108, 57, 'Samsung Laptop', 2500000, 2);
+(127, 102, 60, 'Asus Mouse', 30, 1),
+(128, 103, 53, 'Samsung j7', 100, 1),
+(129, 104, 60, 'Asus Mouse', 30, 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_payment`
+-- Table structure for table `tbl_payment`
 --
 
 CREATE TABLE `tbl_payment` (
@@ -202,37 +235,35 @@ CREATE TABLE `tbl_payment` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_payment`
+-- Dumping data for table `tbl_payment`
 --
 
 INSERT INTO `tbl_payment` (`payment_id`, `payment_status`, `payment_type`, `payment_date_time`, `payment_message`) VALUES
+(102, 'pending', 'cash_on_delivery', '2017-12-31 17:20:20', ''),
 (98, 'pending', 'cash_on_delivery', '2017-12-30 23:45:17', ''),
 (97, 'pending', 'cash_on_delivery', '2017-12-30 23:36:17', ''),
 (96, 'pending', 'cash_on_delivery', '2017-12-30 23:17:07', ''),
-(103, 'pending', 'cash_on_delivery', '2022-08-10 07:40:37', ''),
-(104, 'pending', 'cash_on_delivery', '2022-08-19 03:09:06', ''),
-(105, 'pending', 'cash_on_delivery', '2022-08-19 06:39:35', ''),
-(106, 'pending', 'cash_on_delivery', '2022-08-19 06:40:23', ''),
-(107, 'pending', 'cash_on_delivery', '2022-08-19 06:40:25', ''),
-(108, 'pending', 'cash_on_delivery', '2022-08-19 06:40:27', ''),
-(109, 'pending', 'cash_on_delivery', '2022-08-19 06:41:53', ''),
-(110, 'pending', 'cash_on_delivery', '2022-08-19 06:54:40', '');
+(103, 'pending', 'cash_on_delivery', '2022-09-17 16:56:52', ''),
+(104, 'pending', 'cash_on_delivery', '2022-09-25 07:48:29', ''),
+(105, 'pending', 'cash_on_delivery', '2022-09-25 17:21:30', ''),
+(106, 'pending', 'cash_on_delivery', '2022-09-25 17:24:10', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_product`
+-- Table structure for table `tbl_product`
 --
 
 CREATE TABLE `tbl_product` (
   `pro_id` int(11) NOT NULL,
-  `pro_title` varchar(35) NOT NULL,
+  `pro_title` varchar(255) NOT NULL,
   `pro_desc` text NOT NULL,
   `pro_cat` tinyint(4) NOT NULL,
   `pro_sub_cat` tinyint(4) NOT NULL,
   `pro_brand` tinyint(4) NOT NULL,
   `pro_price` float NOT NULL,
   `pro_quantity` tinyint(4) NOT NULL,
+  `pro_weight` int(11) NOT NULL,
   `pro_availability` tinyint(4) NOT NULL COMMENT 'status 1=instock, 2=outof stock, 3= up coming',
   `pro_status` tinyint(1) NOT NULL DEFAULT 1 COMMENT 'status=1 enable status=2 disable',
   `pro_image` text DEFAULT NULL,
@@ -240,23 +271,21 @@ CREATE TABLE `tbl_product` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_product`
+-- Dumping data for table `tbl_product`
 --
 
-INSERT INTO `tbl_product` (`pro_id`, `pro_title`, `pro_desc`, `pro_cat`, `pro_sub_cat`, `pro_brand`, `pro_price`, `pro_quantity`, `pro_availability`, `pro_status`, `pro_image`, `top_product`) VALUES
-(53, 'Samsung j7', '<p>Samsung j5</p>\r\n', 71, 29, 8, 2560000, 56, 1, 1, 'uploads/j7.jpeg', 1),
-(56, 'Asus Monitor', '<p>Asus Monitor</p>\r\n', 78, 33, 6, 999000, 66, 1, 1, 'uploads/asus.jpg', 1),
-(57, 'Samsung Laptop', '<p>Samsung Laptop</p>\r\n', 72, 29, 8, 2500000, 4, 1, 1, 'uploads/Notebook9-PCD.jpg', 1),
-(58, 'Nokia G20 4/64GB - Night', '<p>Ukuran layar: 6.52 inches, 720 x 1600 pixels (~269 ppi density) IPS LCD<br>\r\nMemori: RAM 4GB, ROM 64GB, microSDXC slot<br>\r\nSistem operasi: Android 11<br>\r\nCPU: MediaTek Helio G35 (12 nm), Octa-core (4x2.3 GHz Cortex-A53 & 4x1.8 GHz Cortex-A53)<br>\r\nGPU: PowerVR GE8320<br>\r\nKamera Belakang: 48 MP f/1.8 PDAF (wide), 5 MP (ultrawide), 2 MP (macro), 2 MP (depth)<br>\r\nKamera Depan: 8 MP (wide)<br>\r\nSIM: Dual SIM (Nano-SIM, dual stand-by)<br>\r\nBaterai: Li-Po 5050 mAh, non-removable<br>\r\nBerat: 197 gr<br>\r\nGaransi Resmi<br>\r\n<br>\r\nBrand Nokia<br>\r\nWarna Night<br>\r\nJaringan GSM / HSPA / LTE<br>\r\nSistem Operasi Android 11<br>\r\nProsesor MediaTek Helio G35 (12 nm), Octa-core (4x2.3 GHz Cortex-A53 & 4x1.8 GHz Cortex-A53)<br>\r\nGPU PowerVR GE8320<br>\r\nRAM 4 GB<br>\r\nROM 64 GB<br>\r\nUkuran Layar 6.52 inch<br>\r\nTipe Layar IPS LCD<br>\r\nResolusi Layar 720 x 1600 pixels, 20:9 ratio (~269 ppi density)<br>\r\nKamera Belakang<br>\r\n48 MP, f/1.8, (wide), PDAF<br>\r\n5 MP, (ultrawide)<br>\r\n2 MP, (macro)<br>\r\n2 MP, (depth)<br>\r\n<br>\r\nKamera Depan 8 MP, (wide)<br>\r\nFitur Kamera LED flash, HDR, panorama<br>\r\nAudio Loudspeaker & 3.5mm jack<br>\r\nWLAN Wi-Fi 802.11 b/g/n, hotspot<br>\r\nBluetooth 5.0, A2DP, LE<br>\r\nGPS A-GPS, GLONASS, BDS<br>\r\nSensor Fingerprint (side-mounted), accelerometer, gyro, proximity<br>\r\nBaterai 5050 mAh<br>\r\nPengisian Daya 10W<br>\r\nSlot Memori Eksternal MicroSD Slot<br>\r\nSIM Dual Nano SIM<br>\r\nBerat 197 gr<br>\r\nDimensi 164,9 x 76 x 9,2 mm<br>\r\nLainnya<br>\r\nRadio<br>\r\nFM radio<br>\r\nNFC</p>\r\n', 71, 34, 13, 1588000, 45, 1, 1, 'uploads/8ca8461d-8f54-4767-8059-de0f8a3287e3.jpg', 1),
-(59, 'Nokia G10 3/32GB - Dusk', '<p>Ukuran layar: 6.52 inci, 720 x 1600 pixels, 20:9 ratio, IPS LCD<br>\r\nMemori: RAM 3 GB, ROM 32 GB, MicroSDXC Slot<br>\r\nSistem operasi: Android 11<br>\r\nCPU: MediaTek Helio G25 (12 nm), Octa-core (4x2.0 GHz Cortex-A53 & 4x1.5 GHz Cortex-A53)<br>\r\nGPU: PowerVR GE8320<br>\r\nKamera: Triple 13 MP (wide) AF, 2 MP (macro), 2 MP, (depth); Depan 8 MP (wide)<br>\r\nSIM: Dual SIM (Nano-SIM, dual stand-by)<br>\r\nBaterai: Non-removable Li-Po 5050 mAh<br>\r\nBerat: 194 gr<br>\r\nGaransi Resmi<br>\r\n<br>\r\nBrand Nokia<br>\r\nWarna Purple<br>\r\nJaringan GSM / HSPA / LTE<br>\r\nSistem Operasi Android 11<br>\r\nProsesor MediaTek Helio G25 (12 nm), Octa-core (4x2.0 GHz Cortex-A53 & 4x1.5 GHz Cortex-A53)<br>\r\nGPU PowerVR GE8320<br>\r\nRAM 3 GB<br>\r\nROM 32 GB<br>\r\nUkuran Layar 6.52 inch<br>\r\nTipe Layar IPS LCD<br>\r\nResolusi Layar 720 x 1600 pixels, 20:9 ratio (~269 ppi density)<br>\r\nKamera Belakang<br>\r\n13 MP, (wide), AF<br>\r\n2 MP, (macro)<br>\r\n2 MP, (depth)<br>\r\n<br>\r\nKamera Depan 8 MP, (wide)<br>\r\nFitur Kamera LED flash, HDR, panorama<br>\r\nAudio Loudspeaker & 3.5mm jack<br>\r\nWLAN 802.11 b/g/n, hotspot<br>\r\nBluetooth 5.0, A2DP, LE<br>\r\nGPS A-GPS, GLONASS, BDS<br>\r\nSensor Fingerprint (side-mounted), accelerometer, proximity<br>\r\nBaterai 5050 mAh<br>\r\nPengisian Daya Charging 10W<br>\r\nSlot Memori Eksternal MicroSD Slot<br>\r\nSIM Dual Nano SIM<br>\r\nBerat 164.9 x 76 x 9.2 mm<br>\r\nDimensi 194 gr<br>\r\nLainnya<br>\r\nVideo<br>\r\n1080p@30fps<br>\r\n<br>\r\nRadio<br>\r\nFM radio<br>\r\n<br>\r\nUSB<br>\r\nUSB Type-C 2.0, USB On-The-Go</p>\r\n', 71, 34, 13, 1399000, 127, 1, 1, 'uploads/77cb99ff-423f-4dc4-a78e-e6e749cc3a50.jpg', 1),
-(60, 'ACER SWIFT 3 Infinity 4 ', '<p>Acer Swift 3 Infinity 4 SF314-511-54Y9 Silver<br>\r\n<br>\r\nHighlights:<br>\r\n• Trendy, all metal sleek chassis (1.2kg-15.9mm), elevated hinge design.<br>\r\n• Rich & bright color (100% sRGB FHD IPS Panel in ultra-narrow bezels 85,73%).<br>\r\n• Intel 11th Gen, PCIe Gen4 SSD, and alternative thermal modes (Fn+F).<br>\r\n<br>\r\nSwift 3 Infinity 4 (SF314-511)<br>\r\n• Processor : Intel® Core™ i5-1135G7 processor<br>\r\n• OS : Windows 11 Home<br>\r\n• Memory : 16 GB of onboard LPDDR4X Dual Channel memory<br>\r\n• Storage : 512 GB SSD PCIe Gen4, NVMe<br>\r\n• Inch, Res, Ratio, Panel : 14\" IPS, Full HD 1920 x 1080, 100% sRGB, high-brightness (300nits), Acer ComfyView™ LED-backlit TFT LCD<br>\r\n• Graphics : Intel® Iris® Xe Graphics<br>\r\n• Network & Communication : IEEE 802.11 a/b/g/n/ac/ax & Bluetooth 5.0<br>\r\n• Battery 4-cell Lithium Ion (Li-Ion)<br>\r\n<br>\r\n• Interfaces/Ports :<br>\r\nHDMI Yes<br>\r\nNumber of HDMI Outputs 1<br>\r\nNumber of USB 3.2 Gen 1 Type-A Ports 2<br>\r\nNumber of USB 3.2 Gen 2 Type-C Ports 1<br>\r\nTotal Number of USB Ports 3<br>\r\nUSB Type-C Yes<br>\r\nUSB Type-C Detail<br>\r\nUSB Type-C port supporting:<br>\r\nUSB 3.2 Gen 2 (up to 10 Gbps)<br>\r\nDisplayPort over USB-C<br>\r\nThunderbolt 4<br>\r\nUSB charging 5 V; 3 A<br>\r\nDC-in port 19 V; 65 W<br>\r\n<br>\r\n• Features :<br>\r\n- Windows Hello (fingerprint) & Wake on Voice.<br>\r\n- Gen 4 SSD<br>\r\n- Alternative Thermal Modes (Fn+F)</p>\r\n', 72, 35, 14, 10799000, -30, 1, 1, 'uploads/6fc7310e-0ca4-4eb0-b48d-4f2ac3096143.jpg', 1),
-(74, 'IPHONE 13', '<p>Iphone 13<br>\r\nLayar : 6.1 inch<br>\r\nMemori : 128 GB - 256 GB - 512 GB<br>\r\nWarna : Red - Starlight - Midnight - Blue - Pink<br>\r\n<br>\r\n- Garansi Apple International 1 Tahun<br>\r\n- BNIB (Brand New In Box)<br>\r\n- Di Dalam box: Unit iPhone + USB-C to Lightning Cable<br>\r\n<br>\r\nSIMCARD:<br>\r\n- IBOX ( Nano + eSim )<br>\r\n- INTER ( Single Nano TANPA esim )<br>\r\n- DUAL NANO ( Nano + Nano )</p>\r\n', 71, 28, 12, 14499000, 99, 1, 1, 'uploads/5941f086-6997-4ca0-8db6-e27ed9a871c2.jpg', 1),
-(78, 'Apple iPad Air 4 2020 10.9 inch 64G', '<p>Apple iPad Air 4 2020 10.9 inch 64GB Wifi Only<br>\r\n<br>\r\n- Space Grey<br>\r\n- Silver<br>\r\n- Rose Gold<br>\r\n- Green<br>\r\n- Sky Blue<br>\r\n<br>\r\nWhat&#39;s in the box :<br>\r\n- iPad Air<br>\r\n- USB?C Charge Cable (1 meter)<br>\r\n- 20W USB?C Power Adapter<br>\r\n<br>\r\nDisplay :<br>\r\nLiquid Retina display<br>\r\n10.9-inch (diagonal) LED?backlit Multi?Touch display with IPS technology<br>\r\n2360-by-1640-pixel resolution at 264 pixels per inch (ppi)<br>\r\nWide color display (P3)<br>\r\nTrue Tone display<br>\r\nFingerprint-resistant oleophobic coating<br>\r\nFully laminated display<br>\r\nAntireflective coating<br>\r\n1.8% reflectivity<br>\r\n500 nits brightness<br>\r\n<br>\r\nChip :<br>\r\nA14 Bionic chip with 64?bit architecture<br>\r\nNeural Engine<br>\r\n<br>\r\nCamera :<br>\r\n12MP Wide camera<br>\r\nƒ/1.8 aperture<br>\r\nFive-element lens<br>\r\nHybrid IR ?lter<br>\r\nBackside illumination sensor<br>\r\nLive Photos with stabilization<br>\r\nAutofocus with Focus Pixels<br>\r\nTap to focus with Focus Pixels<br>\r\nWide color capture for photos and Live Photos<br>\r\nPanorama (up to 63MP)<br>\r\nExposure control<br>\r\nNoise reduction<br>\r\nSmart HDR for photos<br>\r\nAuto image stabilization<br>\r\nBurst mode<br>\r\nTimer mode<br>\r\nPhoto geotagging<br>\r\nImage formats captured: HEIF and JPEG<br>\r\n<br>\r\nVideo Recording :<br>\r\n4K video recording at 24 fps, 30 fps, or 60 fps<br>\r\n1080p HD video recording at 30 fps or 60 fps<br>\r\nSlo?mo video support for 1080p at 120 fps or 240 fps<br>\r\nTime?lapse video with stabilization<br>\r\nCinematic video stabilization (1080p and 720p)<br>\r\nContinuous autofocus video<br>\r\nNoise reduction<br>\r\nTake 8MP still photos while recording 4K video<br>\r\nPlayback zoom<br>\r\nVideo geotagging<br>\r\nVideo formats captured: HEVC and H.264<br>\r\n<br>\r\nMicrophones :<br>\r\nDual microphones for calls, video recording, and audio recording<br>\r\n<br>\r\nSensors :<br>\r\nTouch ID<br>\r\nThree?axis gyro<br>\r\nAccelerometer<br>\r\nBarometer<br>\r\nAmbient light sensor<br>\r\nTouch ID<br>\r\nUnlock iPad<br>\r\nSecure personal data within apps<br>\r\nMake purchases from the iTunes Store, App Store, and Apple Books<br>\r\n<br>\r\nGaransi Internasional 1 Tahun</p>\r\n', 73, 28, 0, 7009000, 127, 1, 1, 'uploads/f9e5d822-1c8a-4bea-b948-4b81ac86bb5d.jpg', 1);
+INSERT INTO `tbl_product` (`pro_id`, `pro_title`, `pro_desc`, `pro_cat`, `pro_sub_cat`, `pro_brand`, `pro_price`, `pro_quantity`, `pro_weight`, `pro_availability`, `pro_status`, `pro_image`, `top_product`) VALUES
+(53, 'Samsung j7', '<p>Samsung j5</p>\r\n', 71, 0, 15, 100, -83, 1000, 1, 1, 'uploads/j7.jpeg', 1),
+(56, 'Asus Monitor', '<p>Asus Monitor</p>\r\n', 74, 0, 6, 20, -67, 2000, 1, 1, 'uploads/asus.jpg', 1),
+(57, 'Samsung Laptop', '<p>Samsung Laptop</p>\r\n', 76, 0, 15, 200, 7, 3000, 1, 1, 'uploads/Notebook9-PCD.jpg', 1),
+(58, 'Latest Watch', '', 73, 0, 6, 20, 7, 3000, 1, 1, 'uploads/asus_watch.png', 1),
+(59, 'Latest Men Watch', '<p>Latest Men Watch</p>\r\n', 73, 0, 6, 50, 1, 500, 1, 1, 'uploads/watch.jpg', 1),
+(60, 'Asus Mouse', '<p>Asus Mouse</p>\r\n', 75, 26, 6, 30, 10, 300, 1, 1, 'uploads/asus1.jpg', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_shipping`
+-- Table structure for table `tbl_shipping`
 --
 
 CREATE TABLE `tbl_shipping` (
@@ -274,25 +303,27 @@ CREATE TABLE `tbl_shipping` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_shipping`
+-- Dumping data for table `tbl_shipping`
 --
 
 INSERT INTO `tbl_shipping` (`shipping_id`, `cus_id`, `cus_name`, `cus_email`, `cus_password`, `cus_mobile`, `cus_address`, `cus_city`, `cus_country`, `cus_zip`, `cus_fax`) VALUES
 (75, 48, 'Sm shuvo', 'sumonsarker080@gmail.com', '', '1611606484', 'Sylhet City', 'Mymensingh', 'Bangladesh', '2220', ''),
-(79, 49, 'Naufal', 'Naufalnur7@gmail.com', '', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', '-- Country --', '40375', ''),
-(80, 49, 'Naufal', 'Naufalnur7@gmail.com', '', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', '-- Country --', '40375', ''),
-(81, 49, 'Naufal', 'Naufalnur7@gmail.com', '', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', '-- Provinsi --', '40375', ''),
-(82, 49, 'Naufal', 'Naufalnur7@gmail.com', '', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', '-- Provinsi --', '40375', ''),
-(83, 49, 'Naufal', 'Naufalnur7@gmail.com', '', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', '-- Provinsi --', '40375', ''),
-(84, 49, 'Naufal', 'Naufalnur7@gmail.com', '', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', 'Jawa Barat', '40375', ''),
-(85, 49, 'Naufal', 'Naufalnur7@gmail.com', '', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', 'Jawa Barat', '40375', ''),
-(86, 50, 'chandrian tubagus', 'chand@gmail.com', '', '088971203725', 'PPI G10/13', 'KABUPATEN BANDUNG', 'Jawa Barat', '40375', ''),
-(87, 49, 'Naufal', 'Naufalnur7@gmail.com', '', '0839393911716', 'jl.jaksanaranata timur rt:08/10', 'KABUPATEN BANDUNG', 'Bali', '40375', '');
+(78, 47, 'Trailer', 'Traileralltimesu@gmail.com', '', '1611606484', 'Sylhet City', 'Mymensingh', 'UK', '2220', ''),
+(79, 49, 'Mugi Pangestu', 'mugi@gmail.com', '', '08993100016', 'cikandang', 'Bandung Barat', 'Jawa Barat', '40552', ''),
+(80, 0, 'Mugi Pangestu', 'mugi@gmail.com', '', '08993100016', 'cikandang', 'Bandung Barat', 'Jawa Barat', '40552', '40552'),
+(81, 50, 'mugi pa', 'mugipangestu41@gmail.com', '', '89931000160', 'cikandang', 'Bandung Barat', 'Jawa Barat', '40552', ''),
+(82, 51, 'mugi pa2', 'mugipangestu42@gmail.com', '', '8993100016', 'cikandang', 'Bandung Barat', 'Jawa Barat', '40552', ''),
+(83, 0, 'young', 'young@gmail.com', '', '08993100016', 'asdasdd', 'asdasd', 'Riau', '40552', '4055212312'),
+(84, 50, 'mugi pa', 'mugipangestu41@gmail.com', '', '89931000160', 'cikandang', 'Bandung Barat', '-- Provinsi --', '40552', ''),
+(85, 50, 'mugi pa', 'mugipangestu41@gmail.com', '', '89931000160', 'cikandang', 'Bandung Barat', '-- Provinsi --', '40552', ''),
+(86, 0, 'mugi', 'mugipangestu41@gmail.com', '', '8993100016', 'cikandang', 'Bandung Barat', 'Bengkulu', '40552', '4055212312'),
+(87, 0, 'mugi', 'mugipangestu41@gmail.com', '', '8993100016', 'cikandang', 'Bandung Barat', 'Kepulauan Riau', '40552', '4055212312'),
+(88, 51, 'mugi pa2', 'mugipangestu42@gmail.com', '', '8993100016', 'cikandang', 'Bandung Barat', '-- Provinsi --', '40552', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_sub_category`
+-- Table structure for table `tbl_sub_category`
 --
 
 CREATE TABLE `tbl_sub_category` (
@@ -302,24 +333,22 @@ CREATE TABLE `tbl_sub_category` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_sub_category`
+-- Dumping data for table `tbl_sub_category`
 --
 
 INSERT INTO `tbl_sub_category` (`sub_cat_id`, `sub_category_name`, `category_sub_id`) VALUES
-(29, 'SAMSUNG', 76),
-(30, 'LENOVO', 71),
-(28, 'APPLE', 73),
-(26, 'OPPO', 74),
-(27, 'HP', 73),
-(25, 'VIVO', 75),
-(33, 'ASUS', 75),
-(34, 'NOKIA', 0),
-(35, 'ACER', 0);
+(29, 'ASUS', 76),
+(30, 'Symphony', 71),
+(28, 'Women Watches', 73),
+(26, 'Hp 22er', 74),
+(27, 'Men watch', 73),
+(25, 'Bloody', 75),
+(33, 'Asus', 75);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_user`
+-- Table structure for table `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -328,164 +357,185 @@ CREATE TABLE `tbl_user` (
   `user_email` varchar(255) NOT NULL,
   `user_password` varchar(255) NOT NULL,
   `user_role` tinyint(3) NOT NULL,
+  `user_membership` tinyint(4) NOT NULL,
   `user_status` tinyint(3) NOT NULL,
   `user_brand` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_user`
+-- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `username`, `user_email`, `user_password`, `user_role`, `user_status`, `user_brand`) VALUES
-(17, 'Chandrian Tubagus', 'chandrian@gmail.com', '$2y$10$bxFSxt2UpzVEsKI9Qd5f0eYo0chOhUHqrOSWSt0SIfDS9kRgDO0hS', 1, 1, 0),
-(2, 'abir', 'abir@gmail.com', '$2y$10$jC5vMlVtrPNSZNZr4cpJ.O4x.pvMMhRMkLV/NuOthbiVlttTHmsTi', 0, 1, 0),
-(3, 'Author', 'admin@gmail.com', 'admin', 3, 1, 0),
-(4, 'Editor', 'editor@gmail.com', '$2y$10$EESLtdn.aLoCOzrpO0lIl.ZzvewPPEV6symLLJ/./xIsSV5wkZbcq', 4, 1, 0),
-(15, 'dddddddddddd', 'dddddddddd@gmail.com', '$2y$10$.pEXHG8AENKIfZUVrfDc0O1CRZI4FBjymkeVznJ7apaqir0beALqa', 0, 1, 0),
-(13, 'Deloyar J Imran', 'Imran@gmail.com', '$2y$10$RnujkWIfW4DURvAKYlaSfOZp6XMPrIXtP.HGCICoKQbWyTHR3104y', 2, 1, 0),
-(14, 'abir', 'ami@gmail.com', '$2y$10$WW/OrYnmOwlFgWEM4zQ22Om3XQFDmyntZegtRNKN9OVcfQ4GXfluC', 0, 1, 0),
-(16, 'Distributor', 'distributor@gmail.com', '$2y$10$JTk4cvBssTZY4NSBy1BZ6OPsjoubPgeob/GA/SgzTLlbScmFyVi.m', 2, 1, 12),
-(18, 'hp', 'hp@gmail.com', '$2y$10$kF2vXU3tHfuzNIju.kW34.ht0opcZuOm54ZLbiT.96DwDXhfnhLwi', 2, 1, 5);
+INSERT INTO `tbl_user` (`user_id`, `username`, `user_email`, `user_password`, `user_role`, `user_membership`, `user_status`, `user_brand`) VALUES
+(1, 'csesumonpro', 'admin@gmail.com', '$2y$10$jC5vMlVtrPNSZNZr4cpJ.O4x.pvMMhRMkLV/NuOthbiVlttTHmsTi', 1, 0, 1, 0),
+(24, 'chandrian tubagus', 'chandrian@gmail.com', '$2y$10$nunITb8GhMnDEpepFfm3ZecsmS4/I4gIY0lq/ITzk1.WeGjjTg9s6', 1, 0, 1, 0),
+(25, 'apple company', 'apple@gmail.com', '$2y$10$Pbfs4wXd58KLL/8oTaf1he1re0K0j0tuCWQQnJ23p84h3uaD.mQ7C', 2, 0, 1, 14),
+(30, 'asus inc', 'asus@gmail.com', '$2y$10$PSAYsiO3xc2ukcWMO82fVufjeeLR1ch33EkO/k7jNvMHqS4Getr8G', 2, 0, 1, 6),
+(29, 'xiaomi inc', 'xiaomi@gmail.com', '$2y$10$1/3KyHDMYXl.xw89zTFNw.hXSHxgNmIP67AQvbjpBHfZqfyRLuc02', 2, 0, 1, 17),
+(28, 'hp company', 'hp@gmail.com', '$2y$10$5SWa8Szmul5ezfpB.nvoZe37ZvUbyZx4lxJ.D64D5qg2PZvJzhTIy', 2, 0, 1, 16),
+(31, 'Apple 2', 'apple2@gmail.com', '$2y$10$XN3t6Uu.0fUc1SJb7nPdoO2cifesWHOb.cXCXu4vVxFlHD6TL45.K', 2, 0, 1, 14),
+(32, 'The Samsung Group', 'samsung@gmail.com', '$2y$10$XN3t6Uu.0fUc1SJb7nPdoO2cifesWHOb.cXCXu4vVxFlHD6TL45.K', 2, 0, 1, 15);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `view_brand_dsb`
+-- (See below for the actual view)
+--
+CREATE TABLE `view_brand_dsb` (
+`brand_id` int(11)
+,`brand_name` varchar(255)
+,`user_brand` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `view_brand_dsb`
+--
+DROP TABLE IF EXISTS `view_brand_dsb`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_brand_dsb`  AS SELECT `tbl_brand`.`brand_id` AS `brand_id`, `tbl_brand`.`brand_name` AS `brand_name`, `tbl_user`.`user_brand` AS `user_brand` FROM (`tbl_brand` join `tbl_user`) WHERE `tbl_brand`.`brand_id` = `tbl_user`.`user_brand` ORDER BY `tbl_brand`.`brand_name` ASC ;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `tbl_brand`
+-- Indexes for table `tbl_brand`
 --
 ALTER TABLE `tbl_brand`
   ADD PRIMARY KEY (`brand_id`);
 
 --
--- Indeks untuk tabel `tbl_category`
+-- Indexes for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Indeks untuk tabel `tbl_contact`
+-- Indexes for table `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
   ADD PRIMARY KEY (`contact_id`);
 
 --
--- Indeks untuk tabel `tbl_customer`
+-- Indexes for table `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
   ADD PRIMARY KEY (`cus_id`);
 
 --
--- Indeks untuk tabel `tbl_order`
+-- Indexes for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
   ADD PRIMARY KEY (`order_id`);
 
 --
--- Indeks untuk tabel `tbl_order_details`
+-- Indexes for table `tbl_order_details`
 --
 ALTER TABLE `tbl_order_details`
   ADD PRIMARY KEY (`order_details_id`);
 
 --
--- Indeks untuk tabel `tbl_payment`
+-- Indexes for table `tbl_payment`
 --
 ALTER TABLE `tbl_payment`
   ADD PRIMARY KEY (`payment_id`);
 
 --
--- Indeks untuk tabel `tbl_product`
+-- Indexes for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
   ADD PRIMARY KEY (`pro_id`);
 
 --
--- Indeks untuk tabel `tbl_shipping`
+-- Indexes for table `tbl_shipping`
 --
 ALTER TABLE `tbl_shipping`
   ADD PRIMARY KEY (`shipping_id`);
 
 --
--- Indeks untuk tabel `tbl_sub_category`
+-- Indexes for table `tbl_sub_category`
 --
 ALTER TABLE `tbl_sub_category`
   ADD PRIMARY KEY (`sub_cat_id`);
 
 --
--- Indeks untuk tabel `tbl_user`
+-- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_brand`
+-- AUTO_INCREMENT for table `tbl_brand`
 --
 ALTER TABLE `tbl_brand`
-  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_category`
+-- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_contact`
+-- AUTO_INCREMENT for table `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_customer`
+-- AUTO_INCREMENT for table `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
-  MODIFY `cus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `cus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_order`
+-- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_order_details`
+-- AUTO_INCREMENT for table `tbl_order_details`
 --
 ALTER TABLE `tbl_order_details`
-  MODIFY `order_details_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `order_details_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_payment`
+-- AUTO_INCREMENT for table `tbl_payment`
 --
 ALTER TABLE `tbl_payment`
-  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_product`
+-- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_shipping`
+-- AUTO_INCREMENT for table `tbl_shipping`
 --
 ALTER TABLE `tbl_shipping`
-  MODIFY `shipping_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `shipping_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_sub_category`
+-- AUTO_INCREMENT for table `tbl_sub_category`
 --
 ALTER TABLE `tbl_sub_category`
-  MODIFY `sub_cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `sub_cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_user`
+-- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

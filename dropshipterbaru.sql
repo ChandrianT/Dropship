@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2022 at 07:26 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Waktu pembuatan: 03 Okt 2022 pada 13.32
+-- Versi server: 10.4.16-MariaDB
+-- Versi PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_brand`
+-- Struktur dari tabel `tbl_brand`
 --
 
 CREATE TABLE `tbl_brand` (
@@ -33,7 +33,7 @@ CREATE TABLE `tbl_brand` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_brand`
+-- Dumping data untuk tabel `tbl_brand`
 --
 
 INSERT INTO `tbl_brand` (`brand_id`, `brand_name`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `tbl_brand` (`brand_id`, `brand_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_category`
+-- Struktur dari tabel `tbl_category`
 --
 
 CREATE TABLE `tbl_category` (
@@ -56,7 +56,7 @@ CREATE TABLE `tbl_category` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_category`
+-- Dumping data untuk tabel `tbl_category`
 --
 
 INSERT INTO `tbl_category` (`category_id`, `category_name`, `category_status`) VALUES
@@ -70,7 +70,7 @@ INSERT INTO `tbl_category` (`category_id`, `category_name`, `category_status`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_contact`
+-- Struktur dari tabel `tbl_contact`
 --
 
 CREATE TABLE `tbl_contact` (
@@ -84,7 +84,7 @@ CREATE TABLE `tbl_contact` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_contact`
+-- Dumping data untuk tabel `tbl_contact`
 --
 
 INSERT INTO `tbl_contact` (`contact_id`, `contact_name`, `contact_email`, `contact_subject`, `contact_message`, `contact_status`, `contact_date`) VALUES
@@ -99,7 +99,7 @@ INSERT INTO `tbl_contact` (`contact_id`, `contact_name`, `contact_email`, `conta
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_customer`
+-- Struktur dari tabel `tbl_customer`
 --
 
 CREATE TABLE `tbl_customer` (
@@ -116,7 +116,7 @@ CREATE TABLE `tbl_customer` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_customer`
+-- Dumping data untuk tabel `tbl_customer`
 --
 
 INSERT INTO `tbl_customer` (`cus_id`, `cus_name`, `cus_email`, `cus_password`, `cus_mobile`, `cus_address`, `cus_city`, `cus_country`, `cus_zip`, `membership`) VALUES
@@ -129,7 +129,7 @@ INSERT INTO `tbl_customer` (`cus_id`, `cus_name`, `cus_email`, `cus_password`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_membership_payment`
+-- Struktur dari tabel `tbl_membership_payment`
 --
 
 CREATE TABLE `tbl_membership_payment` (
@@ -152,7 +152,7 @@ CREATE TABLE `tbl_membership_payment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_membership_payment`
+-- Dumping data untuk tabel `tbl_membership_payment`
 --
 
 INSERT INTO `tbl_membership_payment` (`order_id`, `customer_name`, `customer_email`, `gross_amount`, `payment_type`, `transaction_time`, `settlement_time`, `bank`, `va_numbers`, `status_message`, `pdf_url`, `transaction_status`, `status_code`, `transaction_id`, `finish_redirect_url`, `payment_code`) VALUES
@@ -168,7 +168,7 @@ INSERT INTO `tbl_membership_payment` (`order_id`, `customer_name`, `customer_ema
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_order`
+-- Struktur dari tabel `tbl_order`
 --
 
 CREATE TABLE `tbl_order` (
@@ -182,7 +182,7 @@ CREATE TABLE `tbl_order` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_order`
+-- Dumping data untuk tabel `tbl_order`
 --
 
 INSERT INTO `tbl_order` (`order_id`, `cus_id`, `shipping_id`, `payment_id`, `order_total`, `order_status`, `order_date`) VALUES
@@ -196,7 +196,7 @@ INSERT INTO `tbl_order` (`order_id`, `cus_id`, `shipping_id`, `payment_id`, `ord
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_order_details`
+-- Struktur dari tabel `tbl_order_details`
 --
 
 CREATE TABLE `tbl_order_details` (
@@ -209,7 +209,7 @@ CREATE TABLE `tbl_order_details` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_order_details`
+-- Dumping data untuk tabel `tbl_order_details`
 --
 
 INSERT INTO `tbl_order_details` (`order_details_id`, `order_id`, `product_id`, `product_name`, `product_price`, `sales_quantity`) VALUES
@@ -223,7 +223,7 @@ INSERT INTO `tbl_order_details` (`order_details_id`, `order_id`, `product_id`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_payment`
+-- Struktur dari tabel `tbl_payment`
 --
 
 CREATE TABLE `tbl_payment` (
@@ -235,7 +235,7 @@ CREATE TABLE `tbl_payment` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_payment`
+-- Dumping data untuk tabel `tbl_payment`
 --
 
 INSERT INTO `tbl_payment` (`payment_id`, `payment_status`, `payment_type`, `payment_date_time`, `payment_message`) VALUES
@@ -251,7 +251,7 @@ INSERT INTO `tbl_payment` (`payment_id`, `payment_status`, `payment_type`, `paym
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_product`
+-- Struktur dari tabel `tbl_product`
 --
 
 CREATE TABLE `tbl_product` (
@@ -271,21 +271,22 @@ CREATE TABLE `tbl_product` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_product`
+-- Dumping data untuk tabel `tbl_product`
 --
 
 INSERT INTO `tbl_product` (`pro_id`, `pro_title`, `pro_desc`, `pro_cat`, `pro_sub_cat`, `pro_brand`, `pro_price`, `pro_quantity`, `pro_weight`, `pro_availability`, `pro_status`, `pro_image`, `top_product`) VALUES
-(53, 'Samsung j7', '<p>Samsung j5</p>\r\n', 71, 0, 15, 100, -83, 1000, 1, 1, 'uploads/j7.jpeg', 1),
-(56, 'Asus Monitor', '<p>Asus Monitor</p>\r\n', 74, 0, 6, 20, -67, 2000, 1, 1, 'uploads/asus.jpg', 1),
-(57, 'Samsung Laptop', '<p>Samsung Laptop</p>\r\n', 76, 0, 15, 200, 7, 3000, 1, 1, 'uploads/Notebook9-PCD.jpg', 1),
-(58, 'Latest Watch', '', 73, 0, 6, 20, 7, 3000, 1, 1, 'uploads/asus_watch.png', 1),
-(59, 'Latest Men Watch', '<p>Latest Men Watch</p>\r\n', 73, 0, 6, 50, 1, 500, 1, 1, 'uploads/watch.jpg', 1),
-(60, 'Asus Mouse', '<p>Asus Mouse</p>\r\n', 75, 26, 6, 30, 10, 300, 1, 1, 'uploads/asus1.jpg', 1);
+(53, 'Apple iPad Pro 5 2021 11 inch M1 Chip 128GB', '<p>Spesifikasi :<br>\r\nChip :<br>\r\nApple M1 chip<br>\r\n8-core CPU with 4 performance cores and 4 efficiency cores<br>\r\n8-core GPU<br>\r\n16-core Neural Engine<br>\r\n8GB RAM<br>\r\n<br>\r\nDisplay :<br>\r\nLiquid Retina display<br>\r\n11-inch (diagonal) LED backlit Multi?Touch display with IPS technology<br>\r\n2388-by-1668-pixel resolution at 264 pixels per inch (ppi)<br>\r\nProMotion technology<br>\r\nWide color display (P3)<br>\r\nTrue Tone display<br>\r\nFingerprint-resistant oleophobic coating<br>\r\nFully laminated display<br>\r\nAntireflective coating<br>\r\n1.8% reflectivity<br>\r\n600 nits max brightness<br>\r\n<br>\r\nSupports :<br>\r\n- Apple Pencil (2nd generation)<br>\r\n- Smart Keyboard<br>\r\n- Magic Keyboard</p>\r\n', 71, 33, 14, 11899000, 99, 1000, 1, 1, 'uploads/83b08898-c3f2-487c-a2bc-f2c46b51fe1f.jpg', 1),
+(56, 'Apple Macbook Pro 13inch M1 2021', '<p> Apple M1 chip with 8core CPU, 8core GPU, and 16 core Neural Engine<br>\r\n• 8GB unified memory<br>\r\n• 512GB SSD storage<br>\r\n• Retina display with True Tone<br>\r\n• Magic Keyboard<br>\r\n• Touch Bar and Touch ID<br>\r\n• Two Thunderbolt / USB 4 ports</p>\r\n', 72, 33, 6, 18899000, 99, 2000, 1, 1, 'uploads/30606abc-edcc-4e8c-930b-09eb3099f42b.jpg', 1),
+(57, 'iPad Air 5 2022 M1 Chip 256GB', '<p>Spesifikasi :<br>\r\nApple M1 8-Core CPU<br>\r\n8-Core GPU | 16-Core Neural Engine<br>\r\n10.9\" Liquid Retina Display<br>\r\n2360 x 1640 Screen Resolution (264 ppi)<br>\r\nWi-Fi 6 (802.11ax) | Bluetooth 5.0<br>\r\n12MP Front Camera with Center Stage<br>\r\n12MP Wide Rear Camera<br>\r\nUSB 3.1 Gen 2 Type-C Connector (10 Gb/s)<br>\r\niPadOS</p>\r\n', 71, 33, 14, 8570000, 99, 3000, 1, 1, 'uploads/103372a0-d541-46dd-8992-3017f66335f5.jpg', 1),
+(58, 'Apple iPhone 13', '<p>Spesifikasi :<br>\r\n<br>\r\nJaringan GSM / HSPA / LTE / 5G<br>\r\nSistem Operasi iOS 15<br>\r\nProsesor Apple A15 Bionic (5 nm), Hexa-core (2x3.22 GHz Avalanche + 4xX.X GHz Blizzard)<br>\r\nGPU Apple GPU (4-core graphics)<br>\r\nRAM 4 GB<br>\r\nUkuran Layar 6.1 inch<br>\r\nTipe Layar Super Retina XDR OLED, HDR10, Dolby Vision, 800 nits (HBM), 1200 nits (peak)<br>\r\nResolusi Layar 1170 x 2532 pixels<br>\r\nKamera Belakang<br>\r\n12 MP, f/1.6, 26mm (wide), 1.7µm, dual pixel PDAF, sensor-shift OIS<br>\r\n12 MP, f/2.4, 120?, 13mm (ultrawide)<br>\r\n<br>\r\nKamera Depan<br>\r\n12 MP, f/2.2, 23mm (wide), 1/3.6\"<br>\r\nSL 3D, (depth/biometrics sensor)<br>\r\n<br>\r\nFitur Kamera<br>\r\nDual-LED dual-tone flash, HDR (photo/panorama)<br>\r\n<br>\r\nAudio Stereo speakers<br>\r\nWLAN Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot<br>\r\nBluetooth 5.0, A2DP, LE<br>\r\nGPS Yes, with A-GPS, GLONASS, GALILEO, BDS, QZSS<br>\r\nSensor Face ID, accelerometer, gyro, proximity, compass, barometer, Siri natural language commands and dictation, Ultra Wideband (UWB) support<br>\r\nBaterai 3240 mAh<br>\r\nPengisian Daya<br>\r\nFast charging (23W, unofficial rating), 50% in 30 min (advertised)<br>\r\nUSB Power Delivery 2.0<br>\r\nMagSafe wireless charging 15W<br>\r\nQi magnetic fast wireless charging 7.5W<br>\r\n<br>\r\nSlot Memori Eksternal No<br>\r\nSIM Single Nano SIM + Esim<br>\r\nBerat 174 gr<br>\r\nDimensi 146.7 x 71.5 x 7.65 mm<br>\r\nLainnya<br>\r\nMaterial Glass front (Gorilla Glass), glass back (Gorilla Glass), aluminum fr</p>\r\n', 71, 33, 6, 13799000, 99, 3000, 1, 1, 'uploads/7ab96674-9602-4126-a552-ac8a385d39e4.jpg', 1),
+(59, 'Apple iPhone 13 Pro', '<p>Spesifikasi :<br>\r\n<br>\r\nJaringan GSM / HSPA / LTE / 5G<br>\r\nSistem Operasi iOS 15<br>\r\nProsesor Apple A15 Bionic (5 nm), Hexa-core (2x3.22 GHz Avalanche + 4xX.X GHz Blizzard)<br>\r\nGPU Apple GPU (5-core graphics)<br>\r\nRAM 6 GB<br>\r\nUkuran Layar 6.1 inch<br>\r\nTipe Layar Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (HBM), 1200 nits (peak)<br>\r\nResolusi Layar 1170 x 2532 pixels<br>\r\nKamera Belakang<br>\r\n12 MP, f/1.5, 26mm (wide), 1.9µm, dual pixel PDAF, sensor-shift OIS<br>\r\n12 MP, f/2.8, 77mm (telephoto), PDAF, OIS, 3x optical zoom<br>\r\n12 MP, f/1.8, 13mm, 120? (ultrawide), PDAF<br>\r\n<br>\r\nKamera Depan<br>\r\n12 MP, f/2.2, 23mm (wide), 1/3.6\"<br>\r\n<br>\r\nFitur Kamera<br>\r\nDual-LED dual-tone flash, HDR (photo/panorama)<br>\r\n<br>\r\nAudio Stereo speakers<br>\r\nWLAN Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot<br>\r\nBluetooth 5.0, A2DP, LE<br>\r\nGPS Yes, with A-GPS, GLONASS, GALILEO, BDS, QZSS<br>\r\nSensor Face ID, accelerometer, gyro, proximity, compass, barometer, Siri natural language commands and dictation, Ultra Wideband (UWB) support<br>\r\nBaterai 3095 mAh<br>\r\nPengisian Daya<br>\r\nFast charging (23W, unofficial rating), 50% in 30 min (advertised)<br>\r\nUSB Power Delivery 2.0<br>\r\nMagSafe wireless charging 15W<br>\r\nQi magnetic fast wireless charging 7.5W<br>\r\n<br>\r\nSlot Memori Eksternal No<br>\r\nSIM Single Nano SIM + Esim<br>\r\nBerat 203 gr<br>\r\nDimensi 146.7 x 71.5 x 7.65 mm<br>\r\nLainnya<br>\r\nMaterial Glass front (Gorilla Glass),</p>\r\n', 71, 33, 14, 17149000, 99, 500, 1, 1, 'uploads/3c0f8ca1-3ef7-48d7-9148-e29545c514b4.jpg', 1),
+(77, ',jh', '<p>kjg</p>\r\n', 75, 33, 17, 9789790, 0, 0, 1, 1, 'uploads/3c0f8ca1-3ef7-48d7-9148-e29545c514b41.jpg', NULL),
+(76, 'hk', '<p>kjh</p>\r\n', 0, 33, 0, 890708, 0, 0, 0, 0, 'uploads/iphone_13.jpg', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_shipping`
+-- Struktur dari tabel `tbl_shipping`
 --
 
 CREATE TABLE `tbl_shipping` (
@@ -303,7 +304,7 @@ CREATE TABLE `tbl_shipping` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_shipping`
+-- Dumping data untuk tabel `tbl_shipping`
 --
 
 INSERT INTO `tbl_shipping` (`shipping_id`, `cus_id`, `cus_name`, `cus_email`, `cus_password`, `cus_mobile`, `cus_address`, `cus_city`, `cus_country`, `cus_zip`, `cus_fax`) VALUES
@@ -323,7 +324,7 @@ INSERT INTO `tbl_shipping` (`shipping_id`, `cus_id`, `cus_name`, `cus_email`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_sub_category`
+-- Struktur dari tabel `tbl_sub_category`
 --
 
 CREATE TABLE `tbl_sub_category` (
@@ -333,7 +334,7 @@ CREATE TABLE `tbl_sub_category` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_sub_category`
+-- Dumping data untuk tabel `tbl_sub_category`
 --
 
 INSERT INTO `tbl_sub_category` (`sub_cat_id`, `sub_category_name`, `category_sub_id`) VALUES
@@ -348,7 +349,7 @@ INSERT INTO `tbl_sub_category` (`sub_cat_id`, `sub_category_name`, `category_sub
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Struktur dari tabel `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -363,7 +364,7 @@ CREATE TABLE `tbl_user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_user`
+-- Dumping data untuk tabel `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`user_id`, `username`, `user_email`, `user_password`, `user_role`, `user_membership`, `user_status`, `user_brand`) VALUES
@@ -379,8 +380,8 @@ INSERT INTO `tbl_user` (`user_id`, `username`, `user_email`, `user_password`, `u
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `view_brand_dsb`
--- (See below for the actual view)
+-- Stand-in struktur untuk tampilan `view_brand_dsb`
+-- (Lihat di bawah untuk tampilan aktual)
 --
 CREATE TABLE `view_brand_dsb` (
 `brand_id` int(11)
@@ -391,7 +392,7 @@ CREATE TABLE `view_brand_dsb` (
 -- --------------------------------------------------------
 
 --
--- Structure for view `view_brand_dsb`
+-- Struktur untuk view `view_brand_dsb`
 --
 DROP TABLE IF EXISTS `view_brand_dsb`;
 
@@ -402,137 +403,137 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 
 --
--- Indexes for table `tbl_brand`
+-- Indeks untuk tabel `tbl_brand`
 --
 ALTER TABLE `tbl_brand`
   ADD PRIMARY KEY (`brand_id`);
 
 --
--- Indexes for table `tbl_category`
+-- Indeks untuk tabel `tbl_category`
 --
 ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Indexes for table `tbl_contact`
+-- Indeks untuk tabel `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
   ADD PRIMARY KEY (`contact_id`);
 
 --
--- Indexes for table `tbl_customer`
+-- Indeks untuk tabel `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
   ADD PRIMARY KEY (`cus_id`);
 
 --
--- Indexes for table `tbl_order`
+-- Indeks untuk tabel `tbl_order`
 --
 ALTER TABLE `tbl_order`
   ADD PRIMARY KEY (`order_id`);
 
 --
--- Indexes for table `tbl_order_details`
+-- Indeks untuk tabel `tbl_order_details`
 --
 ALTER TABLE `tbl_order_details`
   ADD PRIMARY KEY (`order_details_id`);
 
 --
--- Indexes for table `tbl_payment`
+-- Indeks untuk tabel `tbl_payment`
 --
 ALTER TABLE `tbl_payment`
   ADD PRIMARY KEY (`payment_id`);
 
 --
--- Indexes for table `tbl_product`
+-- Indeks untuk tabel `tbl_product`
 --
 ALTER TABLE `tbl_product`
   ADD PRIMARY KEY (`pro_id`);
 
 --
--- Indexes for table `tbl_shipping`
+-- Indeks untuk tabel `tbl_shipping`
 --
 ALTER TABLE `tbl_shipping`
   ADD PRIMARY KEY (`shipping_id`);
 
 --
--- Indexes for table `tbl_sub_category`
+-- Indeks untuk tabel `tbl_sub_category`
 --
 ALTER TABLE `tbl_sub_category`
   ADD PRIMARY KEY (`sub_cat_id`);
 
 --
--- Indexes for table `tbl_user`
+-- Indeks untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tbl_brand`
+-- AUTO_INCREMENT untuk tabel `tbl_brand`
 --
 ALTER TABLE `tbl_brand`
   MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `tbl_category`
+-- AUTO_INCREMENT untuk tabel `tbl_category`
 --
 ALTER TABLE `tbl_category`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
--- AUTO_INCREMENT for table `tbl_contact`
+-- AUTO_INCREMENT untuk tabel `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `tbl_customer`
+-- AUTO_INCREMENT untuk tabel `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
   MODIFY `cus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
--- AUTO_INCREMENT for table `tbl_order`
+-- AUTO_INCREMENT untuk tabel `tbl_order`
 --
 ALTER TABLE `tbl_order`
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
--- AUTO_INCREMENT for table `tbl_order_details`
+-- AUTO_INCREMENT untuk tabel `tbl_order_details`
 --
 ALTER TABLE `tbl_order_details`
   MODIFY `order_details_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
--- AUTO_INCREMENT for table `tbl_payment`
+-- AUTO_INCREMENT untuk tabel `tbl_payment`
 --
 ALTER TABLE `tbl_payment`
   MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
--- AUTO_INCREMENT for table `tbl_product`
+-- AUTO_INCREMENT untuk tabel `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
--- AUTO_INCREMENT for table `tbl_shipping`
+-- AUTO_INCREMENT untuk tabel `tbl_shipping`
 --
 ALTER TABLE `tbl_shipping`
   MODIFY `shipping_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
--- AUTO_INCREMENT for table `tbl_sub_category`
+-- AUTO_INCREMENT untuk tabel `tbl_sub_category`
 --
 ALTER TABLE `tbl_sub_category`
   MODIFY `sub_cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `tbl_user`
+-- AUTO_INCREMENT untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
