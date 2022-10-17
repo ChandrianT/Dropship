@@ -29,7 +29,7 @@
                            <h5 style='color:red'> <?php echo validation_errors();?></h5>
                              <?php echo form_open_multipart('save-product','');?>
                                 <div class="form-group">
-                                    <label>Tambahkan Produk Baru</label>
+                                    <label>Tambahkan Nama Produk</label>
                                     <input type="text" class="form-control" value="" name="pro_title" required="">
                                 </div>
                                  <div class="form-group">
@@ -44,16 +44,6 @@
                                         <?php
                                          foreach ($all_cat as $category) {  ?>
                                         <option value="<?php echo $category->category_id;?>"><?php echo $category->category_name?></option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Sub Kategori Terpilih Secara otomatis</label>
-                                    <select class="form-control" name="pro_sub_cat">
-                                            <?php foreach ($all_sub_cat as $sub_cat) {?>
-                                            <option  value="<?php echo $sub_cat->sub_cat_id?>">
-                                                <?php echo $sub_cat->sub_category_name?>
-                                                </option>
                                         <?php } ?>
                                     </select>
                                 </div>
