@@ -109,22 +109,9 @@
                                  <a href="<?php echo base_url();?>dsbadd-product"><i class=""></i>Tambah Produk</a>
                              </li>
                             <li>
-                                 <a href="<?php echo base_url();?>dsbproduct-list"><i class=""></i>List Produk</a>
+                                 <a href="<?php echo base_url();?>dsbproduct-list"><i class=""></i>Daftar Produk</a>
                             </li>
                         </ul>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Brand<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="<?php echo base_url();?>dsbadd-brand">Tambah Brand</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url();?>dsbbrand-list">List Brand</a>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
                     </li>
                 </ul>
                 <!-- end side-menu -->

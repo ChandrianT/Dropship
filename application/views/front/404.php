@@ -27,10 +27,10 @@
 <body>
 	<div class="container text-center">
 		<div class="logo-404">
-			<a href="index.html"><img src="<?php echo base_url()?>assets/front/images/home/logo.png" alt="" /></a>
+			<a href="index.html"><img src="<?php echo base_url()?>assets/front/images/home/logob.png" alt="" /></a>
 		</div>
 		<div class="content-404">
-			<img src="<?php echo base_url()?>assets/front/images/404/404.png" class="img-responsive" alt="" />
+			<img src="<?php echo base_url()?>" class="img-responsive" alt="" />
 			<h1><b>OPPS!</b> Kita tidak dapat menemukan halaman yang anda cari...</h1>
 			<p>Uh... sepertinya kamu merusakan sesuatu.sehingga terdapat file atau folder yang hilang.</p>
 			<h2><a href="<?php echo base_url();?>">Bawa saya kembali ke Dashboard</a></h2>
