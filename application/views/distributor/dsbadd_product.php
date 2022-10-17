@@ -47,16 +47,6 @@
                                         <?php } ?>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label>Sub Kategori Terpilih Secara Otomatis</label>
-                                    <select class="form-control" name="pro_sub_cat">
-                                            <?php foreach ($all_sub_cat as $sub_cat) {?>
-                                            <option  value="<?php echo $sub_cat->sub_cat_id?>">
-                                                <?php echo $sub_cat->sub_category_name?>
-                                                </option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
                                  <div class="form-group">
                                     <label>Pilih Brand</label>
                                     <select class="form-control" name="pro_brand">
