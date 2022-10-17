@@ -119,9 +119,6 @@
                             <li>
                                  <a href="<?php echo base_url();?>category-list"><i class=""></i>Daftar Kategori</a>
                             </li>
-                            <li>
-                                 <a href="<?php echo base_url();?>sub-category-list"><i class=""></i>Daftar Sub Kategori</a>
-                            </li>
                         </ul>
                     </li>
                       <li>
