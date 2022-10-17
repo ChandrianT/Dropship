@@ -116,9 +116,6 @@
                             <li>
                                  <a href="<?php echo base_url();?>add-category"><i class=""></i>Tambah Kategori</a>
                              </li>
-                             <li>
-                                 <a href="<?php echo base_url();?>add-sub-category"><i class=""></i>Tambahkan Sub Kategori</a>
-                             </li>
                             <li>
                                  <a href="<?php echo base_url();?>category-list"><i class=""></i>Daftar Kategori</a>
                             </li>
