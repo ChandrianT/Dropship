@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                            <h5 style='color:red'> <?php echo validation_errors();?></h5>
-                             <?php echo form_open_multipart('save-product','');?>
+                             <?php echo form_open_multipart('dsbsave-product','');?>
                                 <div class="form-group">
                                     <label>Tambahkan Nama Produk</label>
                                     <input type="text" class="form-control" value="" name="pro_title" required="">
@@ -61,8 +61,8 @@
                                     <label>Pilih Brand</label>
                                     <select class="form-control" name="pro_brand">
                                         <option>Pilih Salah Satu</option>
-                                        <?php $all_brand = $this->ProductModel->get_all_brand()?>
-                                        <?php foreach ($all_brand as $brand) { ?>
+                                        <?php $some_brand = $this->ProductModel->get_some_brand()?>
+                                        <?php foreach ($some_brand as $brand) { ?>
                                         <option value="<?php echo $brand->brand_id;?>"><?php echo $brand->brand_name;?></option>
                                         <?php } ?>
                                     </select>

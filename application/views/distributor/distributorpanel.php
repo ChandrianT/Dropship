@@ -114,16 +114,17 @@
                         </ul>
                     </li>
 
-                    <li>
+                   <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Brand<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url();?>dsbadd-brand">Tambah Brand</a>
+                               <a href="<?php echo base_url();?>dsbadd-brand">Tambah Brand</a>
                             </li>
                             <li>
                                 <a href="<?php echo base_url();?>dsbbrand-list">List Brand</a>
                             </li>
                         </ul>
+
                         <!-- second-level-items -->
                     </li>
                 </ul>

@@ -63,6 +63,13 @@ class ProductModel extends CI_Model {
 			->result();
 			return $data;
 	}
+	public function get_some_brand(){
+		$a = $this->session->username;
+		$sql = "SELECT * FROM tbl_brand where brand_id = (select user_brand from tbl_user where username='$a') order by brand_id desc;";
+		$data = $this->db->query($sql);
+		return $data->result_array();
+	}
+	
 	public function get_all_product(){
 		$data = $this->db->select('*')
 			->from('tbl_product')

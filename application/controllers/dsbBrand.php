@@ -28,6 +28,7 @@ class dsbBrand extends CI_Controller{
 		}
 	}
 	public function show_brand_list(){
+		$data['user_brand'] = $this->ProductModel->get_some_brand();
 		$data['all_brands']= $this->dsbBrandModel->get_all_brand();
 		$data['main_content'] = $this->load->view('distributor/dsbbrand_list',$data,true);
 		$this->load->view('distributor/distributorpanel',$data);

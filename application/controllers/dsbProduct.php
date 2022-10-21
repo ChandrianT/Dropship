@@ -33,7 +33,7 @@ class dsbProduct extends CI_Controller{
 
 		$image = $this->ProductModel->add_product_model($product_image);
 	$this->session->set_flashdata("flsh_msg","<font class='success'>Product Added Successfully</font>");
-		redirect('product-list');
+		redirect('dsbproduct-list');
 		}
 	}
 	public function edit_product($product_id){
@@ -90,7 +90,7 @@ class dsbProduct extends CI_Controller{
 	public function delete_product($product_id){
 		$this->ProductModel->delete_product_model($product_id);
 		$this->session->set_flashdata('product_delete','Product Deleted Successfully');
-		redirect('product-list');
+		redirect('dsbproduct-list');
 	}
 	
 	

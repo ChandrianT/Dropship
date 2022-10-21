@@ -108,7 +108,7 @@
 								<textarea name="payment_message"  placeholder="Catatan tentang pesanan kamu untuk toko" rows="10"></textarea>
 							</div>	
 							<span>
-								<label><input type="radio"  name="payment_gateway" value="cash_on_delivery"> Konfirmasi</label>
+								<label><input type="radio"  name="payment_gateway" value="cash_on_delivery"> Bayar ditempat </label>
 							</span>
 							<!-- <span>
 								<label><input type="radio"  name="payment_gateway" value="paypal_payment"> Paypal</label>
