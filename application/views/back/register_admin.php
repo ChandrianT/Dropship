@@ -49,7 +49,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Pilih Brand</label>
+                                    <label>Pilih Brand (Jika Distributor)</label>
                                     <select class="form-control" name="user_brand">
                                         <option>Pilih Salah Satu</option>
                                         <?php $all_brand = $this->ProductModel->get_all_brand()?>

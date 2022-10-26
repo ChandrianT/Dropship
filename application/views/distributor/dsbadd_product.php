@@ -86,14 +86,6 @@
                                     <label>Upload Gambar Produk</label>
                                     <input type="file" name="pro_image">
                                 </div>
-                                 <div class="form-group">
-                                    <label>Top Product</label>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="top_product" value="1">Pilih top product
-                                        </label>
-                                    </div>
-                                </div>
                                 <button type="submit" class="btn btn-primary">Save</button>
                             <?php echo form_close();?>
                         </div>
