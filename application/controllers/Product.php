@@ -15,7 +15,6 @@ class Product extends CI_Controller{
 	}
 	public function add_product_form(){
 		$data['all_cat'] = $this->ProductModel->get_all_category();
-		$data['all_sub_cat'] = $this->ProductModel->get_all_sub_category();
 		$data['main_content'] = $this->load->view('back/add_product',$data,true);
 		$this->load->view('back/adminpanel',$data);
 	}

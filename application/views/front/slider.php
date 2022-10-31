@@ -25,7 +25,7 @@
 					<h1><span>E</span>-DROPSHIP</h1>
 					<h2><?php echo $slider->pro_title;?></h2>
 					<p>Semua orang dapat melakukan bisnis online secara gratis dengan E-Dropship. </p>
-					<button type="button" class="btn btn-default get">Belanja</button>
+					<br><br><br><br>
 				</div>
 				<div class="col-sm-6">
 					<img src="<?php echo base_url().$slider->pro_image;?>" class="girl img-responsive" alt="" />

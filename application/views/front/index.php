@@ -72,7 +72,7 @@
 												<a href="<?php echo base_url()?>payment"><i class="fa fa-credit-card"></i>Pembayaran</a>
 												<?php } ?>
 											</li>
-											<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+											
 											<?php if($customer_id){?>
 											<li>
 												<a href="<?php echo base_url()?>logout"><i class="fa fa-lock"></i> Logout</a>
@@ -170,11 +170,6 @@
 						echo $feature;
 					}?>
 					
-					<!-- This is Category Post option -->
-					
-					<?php if(isset($recommended)){
-						echo $recommended;
-					}?>
 					
 				</div>
 			</div>
@@ -192,67 +187,7 @@
 							<p>Tempat melakukan dropshipping berbagai macam Handphone, Laptop, Tablet, dll. </p>
 						</div>
 					</div>
-					<div class="col-sm-7">
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="<?php echo base_url()?>assets/front/images/home/iframe1.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="<?php echo base_url()?>assets/front/images/home/iframe2.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="<?php echo base_url()?>assets/front/images/home/iframe3.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="<?php echo base_url()?>assets/front/images/home/iframe4.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-					</div>
+					
 					<div class="col-sm-3">
 						<div class="address">
 							<img src="<?php echo base_url()?>assets/front/images/home/indo.png" alt="" />
@@ -331,7 +266,7 @@
 			<div class="container">
 				<div class="row">
 					<p class="pull-left">Copyright © 2022 E-Dropship Inc. All rights reserved.</p>
-					<p class="pull-right">Develop by <span><a target="_blank" href="http://www.sumon-it.com">C&N</a></span></p>
+					<p class="pull-right">Develop by <span><a target="_blank" href="#">C&N</a></span></p>
 				</div>
 			</div>
 		</div>
