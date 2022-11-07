@@ -8,7 +8,6 @@ class dsbProductModel extends CI_Model {
 		$data['pro_title'] = $this->input->post('pro_title',true);
 		$data['pro_desc'] = $this->input->post('pro_desc',true);
 		$data['pro_cat'] = $this->input->post('pro_cat',true);
-		$data['pro_sub_cat'] = $this->input->post('pro_sub_cat',true);
 		$data['pro_brand'] = $this->input->post('pro_brand',true);
 		$data['pro_price'] = $this->input->post('pro_price',true);
 		$data['pro_quantity'] = $this->input->post('pro_quantity',true);
@@ -47,14 +46,7 @@ class dsbProductModel extends CI_Model {
 			->result();
 			return $data;
 	}
-	public function get_all_sub_category(){
-		$data = $this->db->select('*')
-			->from('tbl_sub_category')
-			->order_by('sub_cat_id','desc')
-			->get()
-			->result();
-			return $data;
-	}
+
 	public function get_all_brand(){
 		$data = $this->db->select('*')
 			->from('tbl_brand')

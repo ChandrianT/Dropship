@@ -28,10 +28,26 @@ class HomeModel extends CI_Model {
 			->result();
 			return $data;
 	}
+	public function get_total_product_by_category($category_id){
+		$data = $this->db->select('count(pro_cat) as total')
+			->from('tbl_product')
+			->where('pro_cat',$category_id)
+			->get()
+			->result();
+			return $data;
+	}
 	public function post_brand_by_id($brand_id){
 		$data = $this->db->select('*')
 			->from('tbl_product')
 			->where('pro_brand',$brand_id)
+			->get()
+			->result();
+			return $data;
+	}
+	public function post_category_by_id($category_id){
+		$data = $this->db->select('*')
+			->from('tbl_product')
+			->where('pro_cat',$category_id)
 			->get()
 			->result();
 			return $data;

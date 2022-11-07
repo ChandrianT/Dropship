@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                            <h5 style='color:red'> <?php echo validation_errors();?></h5>
-                             <?php echo form_open_multipart('update-product','');?>
+                             <?php echo form_open_multipart('dsbupdate-product','');?>
                                 <div class="form-group">
                                     <label>Tambah Judul Produk</label>
                                     <input type="text" class="form-control" value="<?php echo $all_product->pro_title?>" name="pro_title" required="">

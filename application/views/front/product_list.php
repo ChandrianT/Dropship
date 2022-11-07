@@ -38,4 +38,3 @@
 	<p>Opss.. barang atau brand yang anda cari tidak ada, silahkan hubungi Customer Service atau cari menggunakan Keyword lain.</p>
 	<?php }?>
 </div><!--features_items-->
-

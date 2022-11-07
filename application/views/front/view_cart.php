@@ -93,7 +93,7 @@
 									$shiping = 0;
 								}
 							?>
-							<li>Biaya<span>Rp. <?php echo $shiping?></span></li>
+							<li>Biaya Pengiriman<span>Rp. <?php echo $shiping?></span></li>
 							<?php $g_total = $cart_total+$tax+$shiping;?>
 							<li>Total <span>
 								<?php

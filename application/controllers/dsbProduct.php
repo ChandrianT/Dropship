@@ -15,7 +15,6 @@ class dsbProduct extends CI_Controller{
 	}
 	public function add_product_form(){
 		$data['all_cat'] = $this->ProductModel->get_all_category();
-		$data['all_sub_cat'] = $this->ProductModel->get_all_sub_category();
 		$data['main_content'] = $this->load->view('distributor/dsbadd_product',$data,true);
 		$this->load->view('distributor/distributorpanel',$data);
 	}
@@ -39,7 +38,6 @@ class dsbProduct extends CI_Controller{
 	public function edit_product($product_id){
 		$data['all_product'] = $this->ProductModel->edit_product_model($product_id);
 		$data['all_cat'] = $this->ProductModel->get_all_category();
-		$data['all_sub_cat'] = $this->ProductModel->get_all_sub_category();
 		$data['all_brand'] = $this->ProductModel->get_all_brand();
 		$data['main_content'] = $this->load->view('distributor/dsbedit_product',$data,true);
 		$this->load->view('distributor/distributorpanel',$data);

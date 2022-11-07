@@ -40,6 +40,7 @@ class Home extends CI_Controller {
 
 		$this->pagination->initialize($config);
 		$data['post_by_brand_id'] = $this->load->HomeModel->get_all_product_pagination($config['per_page'],$this->uri->segment(3));
+		$data['post_by_category_id'] = $this->load->HomeModel->get_all_product_pagination($config['per_page'],$this->uri->segment(3));
 
 // End pagination
 		//$data['post_by_brand_id'] = $this->load->ProductModel->get_all_product();
@@ -73,11 +74,12 @@ class Home extends CI_Controller {
 		$data['feature'] = $this->load->view('front/product_list',$data,true);
 		$this->load->view('front/index',$data);
 	}
-	public function show_post_by_sub_cat_id($sub_cat_id){
+	public function show_post_by_category_id($category_id){
+		$data =array();
 		$data['slider'] = $this->load->view('front/advertise_top','',true);
 		$data['recommended'] = "";
 		$data['category_brand'] = $this->load->view('front/category','',true);
-		$data['post_by_brand_id'] = $this->HomeModel->post_sub_cat_by_id($sub_cat_id);
+		$data['post_by_category_id'] = $this->HomeModel->post_category_by_id($category_id);
 		$data['feature'] = $this->load->view('front/product_list',$data,true);
 		$this->load->view('front/index',$data);
 	}
@@ -93,6 +95,7 @@ class Home extends CI_Controller {
 		$data['recommended'] = "";
 		$data['category_brand'] = $this->load->view('front/category','',true);
 		$data['post_by_brand_id'] = $this->HomeModel->show_product_price_range($min_range,$max_range);
+		$data['post_by_category_id'] = $this->HomeModel->show_product_price_range($min_range,$max_range);
 		$data['feature'] = $this->load->view('front/product_list',$data,true);
 		$this->load->view('front/index',$data);
 

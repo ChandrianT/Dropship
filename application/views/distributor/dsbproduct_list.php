@@ -68,8 +68,8 @@
                                     </td>
                                     <td><?php echo $value['pro_price'];?></td>
                                    <td>
-                                        <a class="btn btn-info" href="<?php echo base_url()?>edit-product/<?php echo $value['pro_id']?>">Edit</a>
-                                        <a class="btn btn-danger" href="<?php echo base_url()?>delete-product/<?php echo $value['pro_id']?>">Hapus</a>
+                                        <a class="btn btn-info" href="<?php echo base_url()?>dsbedit-product/<?php echo $value['pro_id']?>">Edit</a>
+                                        <a class="btn btn-danger" href="<?php echo base_url()?>dsbdelete-product/<?php echo $value['pro_id']?>">Hapus</a>
                                     </td> 
                                     
                                 </tr>

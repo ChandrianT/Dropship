@@ -90,7 +90,7 @@
 									$shiping = 0;
 								}
 							?>
-							<li>Shipping Cost <span>Rp. <?php echo $shiping?></span></li>
+							<li>Biaya Pengiriman <span>Rp. <?php echo $shiping?></span></li>
 							<?php $g_total = $cart_total+$tax+$shiping;?>
 							<li>Total <span>Rp. <?php echo $g_total;?></span></li>
 						</ul>
@@ -108,7 +108,7 @@
 								<textarea name="payment_message"  placeholder="Catatan tentang pesanan kamu untuk toko" rows="10"></textarea>
 							</div>	
 							<span>
-								<label><input type="radio"  name="payment_gateway" value="cash_on_delivery"> Konfirmasi</label>
+								<label><input type="radio"  name="payment_gateway" value="cash_on_delivery"> Pembayaran ditempat</label>
 							</span>
 							<!-- <span>
 								<label><input type="radio"  name="payment_gateway" value="paypal_payment"> Paypal</label>

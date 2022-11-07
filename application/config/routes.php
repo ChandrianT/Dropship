@@ -55,6 +55,7 @@ $route['default_controller'] = 'home';
 $route['products'] = 'Home/productpage';
 $route['product-details/(.+)'] = 'Home/product_details/$1';
 $route['show-post-by-brand-id/(.+)'] = 'Home/show_post_by_brand_id/$1';
+$route['show-post-by-category-id/(.+)'] = 'Home/show_post_by_category_id/$1';
 $route['show-post-by-sub-cat-id/(.+)'] = 'Home/show_post_by_sub_cat_id/$1';
 $route['show-product-by-price-range'] = 'Home/show_product_by_price_range';
 $route['contact'] = 'Home/contact_page';
