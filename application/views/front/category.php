@@ -1,13 +1,13 @@
 <div class="col-sm-3">
 	<div class="left-sidebar">
 	<h2>Kategori</h2>
-		<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+		<div class="brands_products" id="accordian"><!--category-products-->
 			<?php $all_category = $this->CategoryModel->get_all_category();?>
 			<?php $all_brands = $this->BrandModel->get_all_brand();?>
 			
-			<div class="category-name">
+			<div class="brands-name">
 					<ul class="nav nav-pills nav-stacked">
-					<?php foreach ($all_category as  $key => $maincat) {?>
+						<?php foreach ($all_category as  $key => $maincat) {?>
 						<li><a href="<?php echo base_url()?>show-post-by-category-id/<?php echo $maincat->category_id?>"> <span class="pull-right">
 							<?php
 								$total_category = $this->HomeModel->get_total_product_by_category($maincat->category_id)[0]->total;
@@ -16,7 +16,6 @@
 						</span><?php echo $maincat->category_name;?></a></li>
 						<?php } ?>
 					</ul>
-				
 			</div>
 		</div><!--/category-products-->
 		

@@ -80,7 +80,7 @@ class Home extends CI_Controller {
 		$data['recommended'] = "";
 		$data['category_brand'] = $this->load->view('front/category','',true);
 		$data['post_by_category_id'] = $this->HomeModel->post_category_by_id($category_id);
-		$data['feature'] = $this->load->view('front/product_list',$data,true);
+		$data['feature'] = $this->load->view('front/product_list_cat',$data,true);
 		$this->load->view('front/index',$data);
 	}
 	public function _404_page(){

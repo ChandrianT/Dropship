@@ -28,6 +28,7 @@ class dsbBrand extends CI_Controller{
 		}
 	}
 	public function show_brand_list(){
+		$data['user_brand'] = $this->ProductModel->get_some_brand();
 		$data['all_brands']= $this->dsbBrandModel->get_all_brand();
 		$data['main_content'] = $this->load->view('distributor/dsbbrand_list',$data,true);
 		$this->load->view('distributor/distributorpanel',$data);
@@ -42,7 +43,7 @@ class dsbBrand extends CI_Controller{
 	public function edit_brand($brand_id){
 		$data['brand_by_id'] = $this->dsbBrandModel->edit_brand_by_id($brand_id);
 		$data['main_content'] = $this->load->view('distributor/dsbedit_brand',$data,true);
-		$this->load->view('distributor/distributorpanel',$data);
+		$this->load->view('distributor/distributorpanel',$data);	
 	}
 	
 	public function update_brand($brand_id){

@@ -10,9 +10,8 @@ class dsbBrandModel extends CI_Model {
 	public function get_all_brand(){
 		$data = $this->db->select('*')
 			->from('tbl_brand')
-			#->join('tbl_user','tbl_user.user_brand=tbl_brand.brand_id')
+			//->join('tbl_user','tbl_user.user_brand=tbl_brand.brand_id')
 			->order_by('brand_id','desc')
-			
 			->get()
 			->result();
 			return $data;

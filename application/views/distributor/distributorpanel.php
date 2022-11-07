@@ -49,11 +49,6 @@
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
-                        </li>
-                        <li class="divider"></li>
                         <li><a href="<?php echo base_url();?>LoginDistributor/distributorlogout"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
@@ -87,18 +82,7 @@
                     </div>
                         <!--end user image section-->
                     </li>
-                    <li class="sidebar-search">
-                        <!-- search section-->
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                        <!--end search section-->
-                    </li>
+                    
                     <li class="selected">
                         <a href="<?php echo base_url();?>distributordashboard"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
@@ -125,7 +109,6 @@
        
 
     <!-- Core Scripts - Include with every page -->
-  
     <script src="<?php echo base_url()?>assets/back/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="<?php echo base_url()?>assets/back/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="<?php echo base_url()?>assets/back/plugins/pace/pace.js"></script>
