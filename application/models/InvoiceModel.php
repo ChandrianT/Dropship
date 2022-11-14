@@ -44,6 +44,30 @@ class InvoiceModel extends CI_Model {
 						->result();
 						return $data;
 	}
+	public function edit_order_by_id($order_id){
+		$data = $this->db->select('*')
+			->from('tbl_order')
+			->order_by('order_id','desc')
+			->where('order_id',$order_id)
+			->get()
+			->row();
+			return $data;
+	}
+	public function edit_payment_by_id($payment_id){
+		$data = $this->db->select('*')
+			->from('tbl_payment')
+			->order_by('payment_id','desc')
+			->where('payment_id',$payment_id)
+			->get()
+			->row();
+			return $data;
+	}
+	public function update_order_by_id($order_id){
+		$data['order_status'] = $this->input->post('order_status');
+		$this->db->where('order_id', $order_id);
+		$this->db->update('tbl_order', $data);
+
+	}
 	public function delete_order_info_by_id($order_id,$shipping_id,$payment_id){
 		$this->db->where('order_id',$order_id);
 		$this->db->delete('tbl_order');

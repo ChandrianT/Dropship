@@ -1587,13 +1587,13 @@ h2.title {
 }
 
 .cart_info table tr td {
-  border-top: 0 none;
+  border-top: 3 none;
   vertical-align: inherit;
 }
 
 
 #cart_items .cart_info .image {
-  padding-left: 30px;
+  padding-left: 10px;
 }
 
 
@@ -1610,7 +1610,7 @@ h2.title {
 }
 
 #cart_items .cart_info .cart_description p {
-  color:#696763
+  color:#f7d082
 }
 
 

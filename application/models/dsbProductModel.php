@@ -77,7 +77,6 @@ class dsbProductModel extends CI_Model {
 		$data['pro_title'] = $this->input->post('pro_title',true);
 		$data['pro_desc'] = $this->input->post('pro_desc',true);
 		$data['pro_cat'] = $this->input->post('pro_cat',true);
-		$data['pro_sub_cat'] = $this->input->post('pro_sub_cat',true);
 		$data['pro_brand'] = $this->input->post('pro_brand',true);
 		$data['pro_price'] = $this->input->post('pro_price',true);
 		$data['pro_quantity'] = $this->input->post('pro_quantity',true);

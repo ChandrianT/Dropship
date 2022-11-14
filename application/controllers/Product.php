@@ -30,7 +30,7 @@ class Product extends CI_Controller{
 		}else{
 
 		$image = $this->ProductModel->add_product_model($product_image);
-	$this->session->set_flashdata("flsh_msg","<font class='success'>Product Added Successfully</font>");
+		$this->session->set_flashdata("flsh_msg","<font class='success'>Product Added Successfully</font>");
 		redirect('product-list');
 		}
 	}
@@ -79,10 +79,8 @@ class Product extends CI_Controller{
 			unlink($this->input->post('old_pro_image',true));
 			$this->session->set_flashdata("update_pro_msg","Product Updated Successfully");
 			redirect('edit-product/'.$product_id);
+		}	
 		}
-			
-		}
-
 	}
 	public function delete_product($product_id){
 		$this->ProductModel->delete_product_model($product_id);

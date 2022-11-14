@@ -56,9 +56,8 @@
                                     <td><?php echo $value->payment_status;?></td>
                                    <td>
                                         <a class="btn btn-info" href="<?php echo base_url()?>view-order/<?php echo $value->order_id?>">Detail</a>
-                                        <a class="btn btn-warning" href="">Edit</a>
+                                        <a class="btn btn-warning" href="<?php echo base_url()?>edit-order/<?php echo $value->order_id?>">Edit</a>
                                         <a onclick="alert('Are Your Sure to Delete')" class="btn btn-info" href="<?php echo base_url()?>delete-order/<?php echo $value->order_id?>">Hapus</a>
-                                        <a class="btn btn-success" href="">Download</a>
                                     </td> 
                                     
                                 </tr>

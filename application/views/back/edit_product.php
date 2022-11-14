@@ -40,7 +40,7 @@
                                     </textarea>
                                     <script>CKEDITOR.replace('ck')</script>
                                 </div>
-                                 <div class="form-group">
+                                <div class="form-group">
                                     <label>Pilih Kategori</label>
                                     <select class="form-control" name="pro_cat">
                                         <option>Pilih Salah satu</option>
@@ -51,23 +51,6 @@
                                                 selected="selected";
                                                 <?php }?>
                                               value="<?php echo $category->category_id;?>"><?php echo $category->category_name?>
-                                               
-                                           </option>
-                                          
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                                 <div class="form-group">
-                                    <label>Pilih Sub Kategori</label>
-                                    <select class="form-control" name="pro_sub_cat">
-                                        <option>Pilih Salah Satu</option>
-                                        <?php
-                                         foreach ($all_sub_cat as $sub_category) {  ?>
-                                           <option 
-                                                 <?php if($all_product->pro_sub_cat==$sub_category->sub_cat_id){?>
-                                                selected="selected";
-                                                <?php }?>
-                                              value="<?php echo $sub_category->sub_cat_id;?>"><?php echo $sub_category->sub_category_name?>
                                                
                                            </option>
                                           

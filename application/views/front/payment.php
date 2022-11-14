@@ -73,19 +73,19 @@
 							?>
 							<li>Total Belanja <span>Rp. <?php echo $cart_total;?></span></li>
 							<?php
-								$tax = ($cart_total*2)/100;
+								$tax = ($cart_total*2)/11000;
 							?>
 							<li>Pajak 2% <span>Rp. <?php echo $tax?></span></li>
 							<!-- Shipping Cost Dependend Quantity, price, buyer distance etc -->
 							<?php
-								if($cart_total>0 && $cart_total<49){
-									$shiping = 0;
-								}elseif($cart_total>50 && $cart_total<98){
-									$shiping = 2;
-								}elseif($cart_total>99 && $cart_total<198){
-									$shiping = 5;
-								}elseif($cart_total>199){
-									$shiping = 10;
+								if($cart_total>0 && $cart_total<50000){
+									$shiping = 3000;
+								}elseif($cart_total>50000 && $cart_total<98000){
+									$shiping = 5000;
+								}elseif($cart_total>99000 && $cart_total<198000){
+									$shiping = 8000;
+								}elseif($cart_total>199000){
+									$shiping = 10000;
 								}elseif($cart_total==0){
 									$shiping = 0;
 								}

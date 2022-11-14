@@ -13,6 +13,7 @@
 						<tr class="cart_menu">
 							<td class="image">Item</td>
 							<td class="description"></td>
+							<td>Nama</td>
 							<td class="price">Harga</td>
 							<td class="quantity">Jumlah</td>
 							<td class="total">Total</td>
@@ -21,17 +22,16 @@
 					</thead>
 					<tbody>
 						<?php $cart_content = $this->cart->contents();
-						
 						?>
-
 						<?php foreach ($cart_content as $items){ ?>
-
 						<tr>
 							<td class="cart_product">
 								<a href=""><img  width="100" src="<?php echo $items['options']['pro_image']?>" alt=""></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href=""><?php echo $items['name']?></a></h4>
+							<td>
+								<h4><?php echo $items['name']?></a></h4>
+							</td>
 							</td>
 							<td class="cart_price">
 								<p>Rp. <?php echo $items['price']?></p>
@@ -81,14 +81,14 @@
 							<!-- Shipping Cost Dependend Quantity, price, buyer distance etc -->
 							<?php
 								$shiping = "0";
-								if($cart_total>0 && $cart_total<49){
+								if($cart_total>0 && $cart_total<49000){
 									$shiping = 0;
-								}elseif($cart_total>50 && $cart_total<98){
-									$shiping = 2;
-								}elseif($cart_total>99 && $cart_total<198){
-									$shiping = 5;
-								}elseif($cart_total>199){
-									$shiping = 10;
+								}elseif($cart_total>50000 && $cart_total<98000){
+									$shiping = 2000;
+								}elseif($cart_total>99000 && $cart_total<198000){
+									$shiping = 5000;
+								}elseif($cart_total>199000){
+									$shiping = 10000;
 								}elseif($cart_total<0){
 									$shiping = 0;
 								}

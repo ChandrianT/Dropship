@@ -99,6 +99,8 @@ $route['save-product'] = 'Product/insert_product';
 $route['edit-product/(.+)'] = 'Product/edit_product/$1';
 $route['update-product'] = 'Product/update_product';
 $route['delete-product/(.+)'] = 'Product/delete_product/$1';
+/*Admin Invoice*/
+
 
 //Distributor
 $route['distributordashboard'] = 'Distributor/distributordashboard';
@@ -148,7 +150,8 @@ $route['search'] = 'Search/index';
 $route['manage-order'] = 'Invoice/manage_order';
 $route['view-order/(.+)'] = 'Invoice/view_order/$1';
 $route['delete-order/(.+)'] = 'Invoice/delete_order/$1';
-
+$route['edit-order/(.+)'] = 'Invoice/edit_order/$1';
+$route['update-order/(.+)'] = 'Invoice/update_order/$1';
 
 
 $route['404_override'] = 'Home/_404_page';
