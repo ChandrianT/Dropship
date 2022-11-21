@@ -47,23 +47,17 @@
 								<?php $customer_id = $this->session->userdata('cus_id');?>
 								<?php $shipping_id = $this->session->userdata('shipping_id');?>
 
-									<?php if($this->cart->total_items()!=Null && $customer_id!=NULL && $shipping_id!=NULL){
-										?>
+									<?php if($this->cart->total_items()!=Null && $customer_id!=NULL && $shipping_id!=NULL){?>
 								<li>
 									<a href="<?php echo base_url()?>payment"><i class="fa fa-crosshairs"></i> Checkout</a>
-
 								</li>
 									<?php }elseif($this->cart->total_items()!=Null && $customer_id!=NULL){?>
-
 								<li>
 									<a href="<?php echo base_url()?>billing"><i class="fa fa-crosshairs"></i> Checkout</a>
-
 								</li>
-
-									<?php }else{?>
+									<?php }elseif($customer_id==NULL){?>
 								<li>
 									<a href="<?php echo base_url()?>checkout"><i class="fa fa-crosshairs"></i> Checkout</a>
-
 								</li>
 									<?php } ?>
 								
@@ -283,22 +277,22 @@
 	<script src="<?php echo base_url()?>assets/front/js/contact.js"></script>
 
 	<script src="<?php echo base_url()?>assets/front/js/main.js"></script>
+	
 	<!-- Price Range Script Start-->
 	<script type="text/javascript">  
  $(function() {
     $( "#slider-range" ).slider({
       range: true,
       min: 0,
-      max: 10000000,
-      values: [ 3000000,7000000 ],
+      max: 100000000,
+      values: [ 0,50000000 ],
       slide: function( event, ui ) {
         $( "#amount" ).html( "Rp. " + ui.values[ 0 ] + " - Rp. " + ui.values[ 1 ] );
 		$( "#amount1" ).val(ui.values[ 0 ]);
 		$( "#amount2" ).val(ui.values[ 1 ]);
       }
     });
-    $( "#amount" ).html( "Rp. " + $( "#slider-range" ).slider( "values", 0 ) +
-     " - Rp. " + $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#amount" ).html( "Rp. " + $( "#slider-range" ).slider( "values", 0 ) + " - Rp. " + $( "#slider-range" ).slider( "values", 1 ) );
   });
   </script>
 

@@ -12,7 +12,8 @@
 			<!-- <img src="<?php echo base_url()?>assets/front/images/product-details/rating.png" alt="" /> -->
 			<span>
 				<form action="<?php echo base_url()?>add-to-cart"  method="post">
-					<span>Rp. <?php echo $product_info->pro_price?></span><!--This is under form because style factor when product price move to form then style is not formating-->
+					<span>Rp. <?php $product_info_number = number_format($product_info->pro_price,0,',','.'); echo $product_info_number?></span><!--This is under form because style factor when product price move to form then style is not formating-->
+					<br>
 					<label>Jumlah:</label>
 					<input type="text" value="1" name="qty"/>
 					<input type="hidden" value="<?php echo $product_info->pro_id?>" name="pro_id"/>

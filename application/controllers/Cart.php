@@ -63,6 +63,16 @@ class Cart extends CI_Controller{
 		$this->cart->update($data);
 		return redirect("payment");
 	}
+	public function plus_cart_quantity(){
+		$quantity = $this->input->post('qty',true);
+		$row_id = $this->input->post('rowid',true);
+		$data = array(
+        'rowid' => $row_id,
+        'qty'   => $quantity+1
+			);
+		$this->cart->update($data);
+		return redirect("show-cart");
+	}
 
 }
 

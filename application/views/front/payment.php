@@ -10,12 +10,14 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td class="image">Item</td>
-							<td class="description"></td>
+							<td class="image">Gambar</td>
+							<td></td>
+							<td></td>
+							<td class="description">Nama</td>
 							<td class="price">Harga</td>
 							<td class="quantity">Jumlah</td>
 							<td class="total">Total</td>
-							<td></td>
+							<td>Batal</td>
 						</tr>
 					</thead>
 					<tbody>
@@ -29,25 +31,30 @@
 							<td class="cart_product">
 								<a href=""><img  width="100" src="<?php echo $items['options']['pro_image']?>" alt=""></a>
 							</td>
+							<td>
+							</td>
 							<td class="cart_description">
-								<h4><a href=""><?php echo $items['name']?></a></h4>
+							<td>
+								<h4><?php echo $items['name']?></a></h4>
+							</td>
 							</td>
 							<td class="cart_price">
-								<p>Rp. <?php echo $items['price']?></p>
+								<p>Rp. <?php $items_number = number_format($items['price'],0,',','.'); echo $items_number?></p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<form action="<?php echo base_url()?>update-cart-qty-payment" method="post">
-										<a class="cart_quantity_up" href=""> + </a>
-										<input class="cart_quantity_input" type="text" name="qty" value="<?php echo $items['qty']?>" autocomplete="off" size="2">
-										<a class="cart_quantity_down" href=""> - </a>
-										<input  type="hidden" name="rowid" value="<?php echo $items['rowid']?>">
-										<input  type="submit"  value="Update"/>
-									<form>
+								<form action="<?php echo base_url()?>update-cart-qty" method="post">
+									
+									<input class="cart_quantity_input" type="text" name="qty" value="<?php echo $items['qty']?>" autocomplete="off" size="4">
+									<br><br>
+									<input  type="hidden" name="rowid" value="<?php echo $items['rowid']?>">
+									<input  type="submit" value="Update"/>
+								
+								<form>
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">Rp. <?php echo $items['subtotal']?></p>
+								<p class="cart_total_price">Rp. <?php $items_number = number_format($items['subtotal'],0,',','.'); echo $items_number?></p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href="<?php echo base_url()?>delete-to-cart-payment/<?php echo $items['rowid']?>"><i class="fa fa-times"></i></a>
@@ -71,11 +78,11 @@
 							<?php 
 								$cart_total = $this->cart->total();
 							?>
-							<li>Total Belanja <span>Rp. <?php echo $cart_total;?></span></li>
+							<li>Total Belanja <span>Rp. <?php $cart_total_number = number_format($cart_total,0,',','.'); echo $cart_total_number?></span></li>
 							<?php
 								$tax = ($cart_total*2)/11000;
 							?>
-							<li>Pajak 2% <span>Rp. <?php echo $tax?></span></li>
+							<li>Pajak 2% <span>Rp. <?php $tax_number = number_format($tax,0,',','.'); echo $tax_number?></span></li>
 							<!-- Shipping Cost Dependend Quantity, price, buyer distance etc -->
 							<?php
 								if($cart_total>0 && $cart_total<50000){
@@ -90,9 +97,9 @@
 									$shiping = 0;
 								}
 							?>
-							<li>Biaya Pengiriman <span>Rp. <?php echo $shiping?></span></li>
+							<li>Biaya Pengiriman <span>Rp. <?php $shiping_number = number_format($shiping,0,',','.'); echo $shiping_number?></span></li>
 							<?php $g_total = $cart_total+$tax+$shiping;?>
-							<li>Total <span>Rp. <?php echo $g_total;?></span></li>
+							<li>Total Pembayaran<span>Rp. <?php $g_total_number = number_format($g_total,0,',','.'); echo $g_total_number?></span></li>
 						</ul>
 							<form action="<?php echo base_url()?>update-cart-qty-payment" method="post" >	
 							

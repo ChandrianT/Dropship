@@ -99,9 +99,6 @@ class Checkout extends CI_Controller {
 			if($ress->transaction_status == "settlement"){
 				$u = $this->CheckoutModel->updateStatus($email);
 			}
-
-
-			
 			
 		}
 		$data= array();

@@ -24,7 +24,7 @@
 				<div class="col-sm-6">
 					<h1><span>E</span>-DROPSHIP</h1>
 					<h2><?php echo $slider->pro_title;?></h2>
-					<p>Semua orang dapat melakukan bisnis online secara gratis dengan E-Dropship. </p>
+					<p>Semua orang dapat melakukan bisnis online dengan E-Dropship. </p>
 					<br><br><br><br>
 				</div>
 				<div class="col-sm-6">

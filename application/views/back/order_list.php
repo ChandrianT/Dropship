@@ -51,7 +51,8 @@
                                     <td>#<?php echo $value->order_id;?></td>
                                     <td><?php echo $value->cus_name;?></td>
                                     <td><?php echo $value->cus_mobile;?></td>
-                                    <td><?php echo $value->order_total;?></td>
+                                    <td><?php $value_number = number_format($value->order_total,0,',','.'); echo $value_number?></td>
+                                    
                                     <td><?php echo $value->order_status;?></td>
                                     <td><?php echo $value->payment_status;?></td>
                                    <td>

@@ -66,7 +66,7 @@
                                             echo "Up Coming";
                                        }?>
                                     </td>
-                                    <td><?php echo $value->pro_price;?></td>
+                                    <td><?php $value_number = number_format($value->pro_price,0,',','.'); echo $value_number?></td>
                                    <td>
                                         <a class="btn btn-info" href="<?php echo base_url()?>edit-product/<?php echo $value->pro_id?>">Edit</a>
                                         <a class="btn btn-danger" href="<?php echo base_url()?>delete-product/<?php echo $value->pro_id?>">Hapus</a>
